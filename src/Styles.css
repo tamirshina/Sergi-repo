@@ -1,0 +1,105 @@
+
+body, html {
+    height: 100%;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+.infoBackground{
+
+    height: -webkit-fill-available;
+    object-fit: fill;
+    width: 100%;
+
+}
+
+.videoStyle{
+    height: -webkit-fill-available;
+    object-fit: fill;
+    width: 100%;
+}
+
+.textBoxCss{
+    position: fixed;
+    top: 106px;
+    right: 74px;
+    width: 304px;
+    height: 325px;
+}
+
+.textCss{
+    text-align: right;
+    line-height: 1.6;
+    height: 325px;
+    overflow: hidden;
+    
+}
+.scrollBtnCss{
+    position: relative;
+    top: -38px;
+    left: 83px;
+}
+.sergiTitle{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 82px;
+    left: 300px;
+}
+.ellaTitle{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 134px;
+    left: 557px;
+}
+.knownTitle{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 150px;
+    right: 150px;
+}
+.ogTitle{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    top: 184px;
+    left: 40px;
+}
+.waterTitle{
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    left: 50%;
+    bottom: 2%;
+}
+.linkBtnCss{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    bottom: 61px;
+    right: 11px;
+}
+.particularBackGround{
+
+    height: -webkit-fill-available;
+    object-fit: fill;
+    width: 100%;
+}
+
+.backBtn{
+    position: fixed;
+    top: 50px;
+    left: 68px;
+    width: 80px;
+    height: 30px;
+}
+.homeBtn{
+    position: fixed;
+    top: 50px;
+    left: 200px;
+    width: 80px;
+    height: 30px;
+}

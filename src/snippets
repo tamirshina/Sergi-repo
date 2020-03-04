@@ -1,0 +1,10 @@
+useEffect(() => {
+    const videoElement = document.getElementById('zoomInVideo');
+
+    if(videoElement){
+
+      videoElement.requestFullscreen().catch(err => {
+      alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);;
+      });
+    }
+  });

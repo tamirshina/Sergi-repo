@@ -23,7 +23,7 @@ function App() {
         videoElem.play();
         videoElem.onplay = (event) =>{
           setTimeout(function(){ setIsTextInsert(false); }, 2000);
-          setTimeout(function(){ setIsInfoRouting(true);; }, 3500);
+          setTimeout(function(){ setIsInfoRouting(true); }, 3500);
         }
         videoElem.onended = (event) => {
             setIsFrontPage(false);
@@ -33,10 +33,13 @@ function App() {
 }
 
 const moveToParticularInfo =(e)=> {
+
+  if(e){
+    console.log(e.currentTarget.id);
+    setIsParticularInfoPage(true);
+    setTimeout(function(){ setIsInfoRouting(false); }, 100);
     
-  console.log(e.currentTarget.id);
-  setIsParticularInfoPage(true);
-  setIsInfoRouting(false);
+  }
   
 }
 

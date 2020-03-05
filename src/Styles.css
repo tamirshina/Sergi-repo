@@ -103,3 +103,8 @@ body, html {
     width: 80px;
     height: 30px;
 }
+.arrowHolder{
+    position: fixed;
+    right: 100px;
+    bottom: 0px;
+}

@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import VideoComp from './VideoComp';
 import InfoPage from './InfoPage';
 import TextInserter from './TextInserter';
 import ParticularInfo from './ParticularInfoPage';
+import LanguagesButtons from './LanguageButtons';
 import jsonData from './text.json';
 import './App.css';
-
-
 
 function App() {
 
@@ -14,7 +13,12 @@ function App() {
   const [texttoShow] = useState(JSON.stringify(jsonData));
   const [isFrontPage, setIsFrontPage] = useState(true);
   const [isTextInsert,setIsTextInsert] = useState(true);
+  const [isShowButtons,setIsShowButtons] = useState(true);
   const [isParticularInfoPage, setIsParticularInfoPage] = useState(false);
+
+  useEffect(()=>{
+    console.log('mounted11111')
+  })
   
   const playVideo =()=> {
     
@@ -24,13 +28,17 @@ function App() {
         videoElem.onplay = (event) =>{
           setTimeout(function(){ setIsTextInsert(false); }, 2000);
           setTimeout(function(){ setIsInfoRouting(true); }, 3500);
+          setIsShowButtons(false);
+
         }
         videoElem.onended = (event) => {
             setIsFrontPage(false);
             setIsTextInsert(false);
+            setIsShowButtons(true);
           };
     }
 }
+
 
 const moveToParticularInfo =(e)=> {
 
@@ -55,9 +63,10 @@ const homeBtn =()=> {
   setIsParticularInfoPage(false);
   setIsInfoRouting(false);
 }
-
   return (
 <>
+
+{isShowButtons?<LanguagesButtons />:null}
 {isFrontPage?<VideoComp playVideoLogic={playVideo} className="App"></VideoComp>:null}
 {isInfoRouting?<InfoPage moveToParticularInfo={moveToParticularInfo} homeBtnLogic={homeBtn} />:null}
 {isTextInsert?<TextInserter textToShow={texttoShow} />:null}

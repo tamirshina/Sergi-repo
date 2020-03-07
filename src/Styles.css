@@ -108,3 +108,9 @@ body, html {
     right: 100px;
     bottom: 0px;
 }
+.languagesDiv{
+    position: fixed;
+    top:150px;
+    display: grid;
+    grid-row-gap: 8px;
+}

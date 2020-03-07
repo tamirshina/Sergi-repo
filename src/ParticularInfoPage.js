@@ -9,12 +9,10 @@ function ParticularInfoPage ({backBtnLogic, homeBtnLogic}){
 
     useEffect(
         () => {
-        console.log('didMount particu');
         timer(homeBtnLogic); 
 
         return () => { // Return callback to run on unmount.
 
-        console.log('UNMount particu');
         removeTimer();
           };
         // eslint-disable-next-line react-hooks/exhaustive-deps

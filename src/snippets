@@ -8,3 +8,19 @@ useEffect(() => {
       });
     }
   });
+
+
+
+  switch(lang){
+
+            case "hebrew":
+                languages=languages.hebrew;
+                break;
+            case "russian":
+                languages=languages.russian;
+                break;
+            case "english":
+                languages=languages.elglish;
+                break;
+            default:
+                languages=languages.hebrew;

@@ -1,19 +1,24 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, {useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
 import ScrollImage from './scrollImage';
 import InfoRoutingImage from './03_background-screen-02.png';
+import LanguagesButtons from './LanguageButtons';
 import HomeBtn from './HomeBtn';
 import {timer, removeTimer} from './TimerHundler';
 import './Styles.css';
 
+import LangContext from './SergiContext';
 
 
 
 function InfoPage({moveToParticularInfo, homeBtnLogic}) {
 
+    const card = useContext(LangContext).lang;
+
         useEffect(
         () => {
         timer(homeBtnLogic); 
+        console.log('mounted2222')
 
         return () => { // Return callback to run on unmount.
             
@@ -28,10 +33,11 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
     return (
 
     <div> 
+        <LanguagesButtons />
         <img src={InfoRoutingImage} className='infoBackground'></img>
         <HomeBtn homeBtnLogic={homeBtnLogic} />
-            <div id='sergi' onClick={moveToParticularInfo}className='sergiTitle'>
-            <h1>סרגיי</h1>
+            <div id='sergi' onClick={moveToParticularInfo} className='sergiTitle'>
+            <h1>{card}</h1>
             <ScrollImage />
             </div>
             <div id='ella' onClick={moveToParticularInfo} className='ellaTitle'>

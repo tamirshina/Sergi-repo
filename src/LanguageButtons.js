@@ -3,13 +3,24 @@ import LangContext from './SergiContext';
 import './Styles.css';
 
 
-function LanguageButtons ({setLanguageToUse}) {
+function LanguageButtons () {
 
-    const { switchLang } = useContext(LangContext);
+    const { switchLang, lang } = useContext(LangContext);
+
+    function isLeftToRight() {
+
+        console.log(lang);
+        
+        if(lang==="english" || lang==="russian"){
+            return true;
+        }
+        return false;
+        
+      }
 
 
     return (
-        <div id= 'languagesBtnsDiv' className='languagesDiv'>
+        <div id='languagesBtnsDiv' className={isLeftToRight()?'leftToRightLangDiv':'languagesDiv'}>
 
         <button onClick={() => {switchLang("hebrew");}} >Hebrew</button>
 

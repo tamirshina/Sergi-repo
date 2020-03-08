@@ -27,18 +27,35 @@ body, html {
     width: 304px;
     height: 325px;
 }
-
+.leftToRightTextBox{
+    position: fixed;
+    top: 15px;
+    width: 304px;
+    height: 325px;
+}
 .textCss{
     text-align: right;
     line-height: 1.6;
     height: 325px;
     overflow: hidden;
-    
+}
+.lefToRightTexstCss{
+    text-align: left;
+    line-height: 1.6;
+    height: 325px;
+    overflow: hidden;
 }
 .scrollBtnCss{
     position: relative;
     top: -38px;
     left: 83px;
+}
+.topScrollBtnCss{
+    position: relative;
+    left: 50px;
+    height: 60px;
+    margin-bottom: -20px;
+    margin-top: -20px;
 }
 .sergiTitle{
     height: 100px;
@@ -92,11 +109,26 @@ body, html {
 .backBtn{
     position: fixed;
     top: 50px;
-    left: 68px;
+    right: 68px;
+    width: 80px;
+    height: 30px;
+}
+.backBtnRightToLeft{
+    position: fixed;
+    top: 50px;
+    left : 68px;
     width: 80px;
     height: 30px;
 }
 .homeBtn{
+    position: fixed;
+    top: 50px;
+    right: 200px;
+    width: 80px;
+    height: 30px;
+}
+.rightToLeftHomeBtn{
+
     position: fixed;
     top: 50px;
     left: 200px;
@@ -113,4 +145,23 @@ body, html {
     top:150px;
     display: grid;
     grid-row-gap: 8px;
+    z-index: 99;
+}
+
+.leftToRightLangDiv{
+ 
+    position: fixed;
+    top:150px;
+    right: 70px;
+    display: grid;
+    grid-row-gap: 8px;
+    z-index: 99;
+}
+
+.topScrollBtnCss{
+    position: relative;
+    height: 150px;
+    margin-bottom: -131px;
+    top: -67px;
+    left: 83px;
 }

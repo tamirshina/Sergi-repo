@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import VideoComp from './VideoComp';
 import InfoPage from './InfoPage';
 import TextInserter from './TextInserter';
 import ParticularInfo from './ParticularInfoPage';
 import LanguagesButtons from './LanguageButtons';
-import jsonData from './text.json';
 import './App.css';
 
 function App() {
 
   const [isInfoRouting, setIsInfoRouting] = useState(false);
-  const [texttoShow] = useState(JSON.stringify(jsonData));
   const [isFrontPage, setIsFrontPage] = useState(true);
   const [isTextInsert,setIsTextInsert] = useState(true);
   const [isShowButtons,setIsShowButtons] = useState(true);
+  const [typeOfParticularInfo, setTypeOfParticularInfo] = useState();
   const [isParticularInfoPage, setIsParticularInfoPage] = useState(false);
-
-  useEffect(()=>{
-    console.log('mounted11111')
-  })
   
   const playVideo =()=> {
     
@@ -43,7 +38,7 @@ function App() {
 const moveToParticularInfo =(e)=> {
 
   if(e){
-    console.log(e.currentTarget.id);
+    setTypeOfParticularInfo(e.currentTarget.id);
     setIsParticularInfoPage(true);
     setTimeout(function(){ setIsInfoRouting(false); }, 100);
     
@@ -69,8 +64,8 @@ const homeBtn =()=> {
 {isShowButtons?<LanguagesButtons />:null}
 {isFrontPage?<VideoComp playVideoLogic={playVideo} className="App"></VideoComp>:null}
 {isInfoRouting?<InfoPage moveToParticularInfo={moveToParticularInfo} homeBtnLogic={homeBtn} />:null}
-{isTextInsert?<TextInserter textToShow={texttoShow} />:null}
-{isParticularInfoPage?<ParticularInfo backBtnLogic={backToInfoRouting} homeBtnLogic={homeBtn} />:null}
+{isTextInsert?<TextInserter />:null}
+{isParticularInfoPage?<ParticularInfo backBtnLogic={backToInfoRouting} homeBtnLogic={homeBtn} typeOfParticularInfo={typeOfParticularInfo} />:null}
 </>
   );
 }

@@ -24,3 +24,43 @@ useEffect(() => {
                 break;
             default:
                 languages=languages.hebrew;
+
+                
+// export let languages = {
+//     russian: {},
+//     elglish: {},
+//     hebrew: {},
+//   };
+
+//   export let languages = ['hebrew', 'russian', 'english']
+  
+//   export const LanguageContext = React.createContext({
+//     language: languages[0],//defualt value
+//     setLanguage: () => {},
+    
+//   });
+
+
+import React, {useContext} from 'react';
+import LangContext from './SergiContext';
+import russianText from './russianText';
+import englishText from './englishText';
+import hebrewText from './hebrewText';
+
+
+function IsLeftToRight () {
+
+    const { lang } = useContext(LangContext);
+
+
+    
+    if(lang==="english"){
+        return englishText;
+    }
+    else if (lang==="russian")
+    {}
+    
+    
+  }
+
+  export default IsLeftToRight;

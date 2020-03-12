@@ -43,13 +43,13 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
         <LanguagesButtons />
         <img src={InfoRoutingImage} className='infoBackground'></img>
         <HomeBtn homeBtnLogic={homeBtnLogic} />
-            <div id='sergi' onClick={moveToParticularInfo} className='sergiTitle'>
+            <div id='sergi' onClick={moveToParticularInfo} className='sergiTitle addTitleFont'>
             <h1>{lang==="hebrew"?hebrewTitelsToShow.one
                 :lang==="english"?englishTitelsToshow.one
                 :russianTitlesToShow.one}</h1>
             <ScrollImage />
             </div>
-            <div id='ella' onClick={moveToParticularInfo} className='ellaTitle'>
+            <div id='ella' onClick={moveToParticularInfo} className='ellaTitle addTitleFont'>
                 <h1>
                     {lang==="hebrew"?hebrewTitelsToShow.two
                     :lang==="english"?englishTitelsToshow.two
@@ -57,7 +57,7 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
                 </h1>
                 <ScrollImage />
             </div>
-            <div id='known' onClick={moveToParticularInfo} className='knownTitle'>
+            <div id='known' onClick={moveToParticularInfo} className='knownTitle addTitleFont'>
                 <h1>
                     {lang==="hebrew"?hebrewTitelsToShow.five
                     :lang==="english"?englishTitelsToshow.five
@@ -65,7 +65,7 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
                 </h1>
                 <ScrollImage />
             </div>
-            <div id='ogFinger' onClick={moveToParticularInfo} className='ogTitle'>
+            <div id='ogFinger' onClick={moveToParticularInfo} className='ogTitle addTitleFont'>
                  <h1>
                     {lang==="hebrew"?hebrewTitelsToShow.three
                     :lang==="english"?englishTitelsToshow.three
@@ -73,7 +73,7 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
                 </h1>
                 <ScrollImage />
             </div>
-            <div id='waterHoles' onClick={moveToParticularInfo} className='waterTitle'>
+            <div id='waterHoles' onClick={moveToParticularInfo} className='waterTitle addTitleFont'>
                 <h1>
                     {lang==="hebrew"?hebrewTitelsToShow.four
                     :lang==="english"?englishTitelsToshow.four

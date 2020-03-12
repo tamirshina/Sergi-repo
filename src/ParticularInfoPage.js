@@ -1,9 +1,14 @@
 import React, {useEffect} from 'react';
-import sergiPageImage from './04_particularImage.png';
-import ellaPageImage from './cat1.jpg';
-import knownPageImage from './cat2.jpeg';
-import waterPageImage from './cat3.jpeg';
-import ogPageImage from './cat4.jpeg';
+import sergiPageImageEN from './06_sergiEnglish.png';
+import sergiImageHE from './04_sergiImageHe.png';
+import ellaPageImageEN from './06_sergiEnglish.png';
+import ellaImageHe from './04_sergiImageHe.png'
+import knownPageImageEN from './06_sergiEnglish.png';
+import knownImageHe from './04_sergiImageHe.png';
+import waterPageImageEN from './06_sergiEnglish.png';
+import waterImageHe from './04_sergiImageHe.png';
+import ogPageImageEN from './06_sergiEnglish.png';
+import ogImageHe from './04_sergiImageHe.png';
 import isLeftToRight from './IsLeftToRightFunc';
 import {timer, removeTimer} from './TimerHundler';
 import TextInserter from './TextInserterParticular';
@@ -26,17 +31,17 @@ function ParticularInfoPage ({backBtnLogic, homeBtnLogic, typeOfParticularInfo})
           switch(typeOfParticularInfo){
 
             case "sergi":
-                return sergiPageImage;
+                return isLeftToRight()? sergiPageImageEN:sergiImageHE;
             case "ella":
-                return ellaPageImage;            
+                return isLeftToRight()? ellaPageImageEN:ellaImageHe;            
             case "known":
-                return knownPageImage; 
+                return isLeftToRight()?knownPageImageEN:knownImageHe; 
             case "ogFinger":
-                return ogPageImage; 
+                return isLeftToRight()?ogPageImageEN:ogImageHe; 
             case "waterHoles":
-                return waterPageImage; 
+                return isLeftToRight()?waterPageImageEN:waterImageHe; 
             default:
-              return sergiPageImage;
+              return sergiPageImageEN;
         }
       }
  

@@ -5,18 +5,19 @@ import LangContext from './SergiContext';
 import russianText from './russianText';
 import englishText from './englishText';
 import hebrewText from './hebrewText';
+import headerUnderline from './14_Headerunderline.png';
 import {timer, removeTimer} from './TimerHundler';
+import upperTextArrow from './11_textArrowUP.png';
 import './Styles.css';
 
 function TextInserterParticular ({typeOfInfo, homeBtnLogic}){
 
     const lang = useContext(LangContext).lang;
-    const [russianTextToShow] = useState(JSON.parse(JSON.stringify(russianText)).particularInfo);
-    const [englishTextToshow] = useState(JSON.parse(JSON.stringify(englishText)).particularInfo);
-    const [hebrewTextToShow] = useState(JSON.parse(JSON.stringify(hebrewText)).particularInfo);
-
+    const [russianTextToShow] = useState(JSON.parse(JSON.stringify(russianText)));
+    const [englishTextToshow] = useState(JSON.parse(JSON.stringify(englishText)));
+    const [hebrewTextToShow] = useState(JSON.parse(JSON.stringify(hebrewText)));
+    
     function resetTimer() {
-        console.log('resetTimer activated')
         removeTimer();
         timer(homeBtnLogic);
       }
@@ -27,42 +28,85 @@ function TextInserterParticular ({typeOfInfo, homeBtnLogic}){
 
             case "sergi":
                 if(lang==="hebrew"){
-                    return hebrewTextToShow.sergi;
+                    return hebrewTextToShow.particularInfo.sergi;
                 }else if(lang==="english"){
-                    return englishTextToshow.sergi;
+                    return englishTextToshow.particularInfo.sergi;
                 }
-                return russianTextToShow.sergi;
+                return russianTextToShow.particularInfo.sergi;
             case "ella":
                 if(lang==="hebrew"){
-                    return hebrewTextToShow.ella;
+                    return hebrewTextToShow.particularInfo.ella;
                 }else if(lang==="english"){
-                    return englishTextToshow.ella;
+                    return englishTextToshow.particularInfo.ella;
                 }
-                return russianTextToShow.ella;            
+                return russianTextToShow.particularInfo.ella;            
             case "known":
                 if(lang==="hebrew"){
-                    return hebrewTextToShow.famous;
+                    return hebrewTextToShow.particularInfo.famous;
                 }else if(lang==="english"){
-                    return englishTextToshow.famous;
+                    return englishTextToshow.particularInfo.famous;
                 }
-                return russianTextToShow.famous;
+                return russianTextToShow.particularInfo.famous;
             case "ogFinger":
-                if(lang==="hebrew"){
-                    return hebrewTextToShow.og;
+                if(lang==="hebrew"){                   
+                    return hebrewTextToShow.particularInfo.og;
                 }else if(lang==="english"){
-                    return englishTextToshow.og;
+                    return englishTextToshow.particularInfo.og;
                 }
-                return russianTextToShow.og;
+                return russianTextToShow.particularInfo.og;
             case "waterHoles":
                 if(lang==="hebrew"){
-                    return hebrewTextToShow.water;
+                    return hebrewTextToShow.particularInfo.water;
                 }else if(lang==="english"){
-                    return englishTextToshow.water;
+                    return englishTextToshow.particularInfo.water;
                 }
-                return russianTextToShow.water; 
+                return russianTextToShow.particularInfo.water; 
             default:
-              return englishTextToshow.sergi;
+              return englishTextToshow.particularInfo.sergi;
+        }
+    }
 
+    function titleToInsert (){
+
+        switch(typeOfInfo){
+
+            case "sergi":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.titles.one;
+                }else if(lang==="english"){
+                    return englishTextToshow.titles.one;
+                }
+                return russianTextToShow.titles.one;
+            case "ella":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.titles.two;
+                }else if(lang==="english"){
+                    return englishTextToshow.titles.two;
+                }
+                return russianTextToShow.titles.two;            
+            case "known":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.titles.five;
+                }else if(lang==="english"){
+                    return englishTextToshow.titles.five;
+                }
+                return russianTextToShow.titles.five;
+            case "ogFinger":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.titles.three;
+                }else if(lang==="english"){
+                    return englishTextToshow.titles.three;
+                }
+                return russianTextToShow.titles.three;
+            case "waterHoles":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.titles.four;
+                }else if(lang==="english"){
+                    return englishTextToshow.titles.four;
+                }
+                return russianTextToShow.titles.four; 
+            default:
+              return englishTextToshow.particularInfo.sergi;
         }
     }
     const [isTopScrollBtn, setIsTopScrollBtn] = useState(false);
@@ -99,13 +143,19 @@ function TextInserterParticular ({typeOfInfo, homeBtnLogic}){
 
  
   return (
-      <div className={isLeftToRight()?'leftToRightTextBox':'textBoxCss'}>
-        <h1>{typeOfInfo}</h1>
-            {isTopScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateUp()}} src={scrollBtn} alt="scrollBtn" className='topScrollBtnCss'/>:null}
-            <p className={isLeftToRight()?'lefToRightTexstCss':'textCss'} id="particularTextBox"> 
+      <div className={isLeftToRight()?'infoTextBoxLeftToRight':'textBoxCss'}>
+        {isLeftToRight()?<div className='enInfoTitle'>
+            <h1 className='titleFont frontPageEnTitle'>{titleToInsert()}</h1>
+            <img alt='underline' src={headerUnderline} className='frontPageUnderline'/>
+          </div>:<div>
+            <h1 className='titleFont heInfoPageTitle'>{titleToInsert()}</h1>
+            <img alt='underline' src={headerUnderline} className='heInfoPageUnderline'/>
+          </div>}
+            {isTopScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateUp()}} src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topInfoScrollEn':'topScrollOneHE'}/>:null}
+            <p className={isLeftToRight()?'infoEnText':'textCss'} id="particularTextBox"> 
                 {infoToInsert()}
             </p>
-            {isButtomScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateDown()}} src={scrollBtn} alt="scrollBtn" className='scrollBtnCss'/>:null}
+            {isButtomScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateDown()}} src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomInfoScroll':'buttomScrollOneHE'}/>:null}
         </div>
         );
 }

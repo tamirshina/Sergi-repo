@@ -40,10 +40,8 @@ const moveToParticularInfo =(e)=> {
   if(e){
     setTypeOfParticularInfo(e.currentTarget.id);
     setIsParticularInfoPage(true);
-    setTimeout(function(){ setIsInfoRouting(false); }, 100);
-    
-  }
-  
+    setTimeout(function(){ setIsInfoRouting(false); }, 100); 
+  }  
 }
 
 const backToInfoRouting =()=> {

@@ -66,7 +66,7 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
                 <ScrollImage />
             </div>
             <div id='ogFinger' onClick={moveToParticularInfo} className='ogTitle addTitleFont'>
-                 <h1>
+                 <h1 className='ogHeadline'>
                     {lang==="hebrew"?hebrewTitelsToShow.three
                     :lang==="english"?englishTitelsToshow.three
                     :russianTitlesToShow.three}

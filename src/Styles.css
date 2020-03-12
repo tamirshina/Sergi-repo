@@ -51,9 +51,10 @@ body, html {
     line-height: 1.6;
     height: 325px;
     overflow: hidden;
+    font-family: fantasy;
 }
 .lefToRightTexstCss{
-
+    font-family: fantasy;
     text-align: left;
     line-height: 1.6;
     overflow: hidden;
@@ -66,7 +67,7 @@ body, html {
 .buttomScrollOneHE{
     position: relative;
     top: -38px;
-    left: 83px;
+    left: 37%;
 }
 .buttomScrollOneEN {
     position: absolute;
@@ -76,6 +77,7 @@ body, html {
 .topScrollOneHE{
     position: relative;
     left: 50%;
+    top: 40%;
     height: 20px;
 }
 .topScrollOneEN{
@@ -85,46 +87,38 @@ body, html {
     height: 20px;
 }
 .sergiTitle{
-    height: 100px;
-    width: 100px;
     position: fixed;
     top: 82px;
-    left: 300px;
+    left: 215px;
 }
 .ellaTitle{
-    height: 100px;
-    width: 100px;
     position: fixed;
     top: 134px;
-    left: 557px;
+    left: 507px;
 }
 .knownTitle{
-    height: 100px;
-    width: 100px;
     position: fixed;
     top: 150px;
     right: 150px;
 }
 .ogTitle{
-    height: 100px;
-    width: 100px;
     position: fixed;
     top: 184px;
     left: 40px;
 }
+.ogHeadline{
+    position: relative;
+    left: 30%;
+}
 .waterTitle{
-    height: 100px;
-    width: 100px;
     position: fixed;
-    left: 50%;
-    bottom: 2%;
+    left: 41%;
+    bottom: -19%;
 }
 .linkBtnCss{
-    height: 100px;
-    width: 100px;
     position: relative;
-    bottom: 61px;
-    right: 11px;
+    top: -70px;
+    right: -18%;
 }
 .particularBackGround{
 
@@ -245,6 +239,7 @@ font-family: titleFont;
     top: 14%;
 }
 .infoEnText{
+    font-family: fantasy;
     position: fixed;
     left: 8%;
     top: 33%;

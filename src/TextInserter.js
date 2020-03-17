@@ -11,18 +11,26 @@ import seeMoreEN from './09_Touchtoseemore.png';
 import seeMoreHE from './13_extraInfoHe.png';
 import headerUnderline from './14_Headerunderline.png';
 import upperTextArrow from './11_textArrowUP.png';
+import hebrewHeader from './23_title_HEB.png';
 import './Styles.css';
 
 function TextInserter (){
 
     const lang = useContext(LangContext).lang;
-    const [russianTextToShow] = useState(JSON.parse(JSON.stringify(russianText)).frontPage);
-    const [englishTextToshow] = useState(JSON.parse(JSON.stringify(englishText)).frontPage);
-    const [hebrewTextToShow] = useState(JSON.parse(JSON.stringify(hebrewText)).frontPage);
-
-
     const [isTopScrollBtn, setIsTopScrollBtn] = useState(false);
     const [isButtomScrollBtn, setIsButtomScrollBtn] = useState(true);
+
+    function whichFileToUse (){
+        if(lang==="hebrew"){
+            return JSON.parse(JSON.stringify(hebrewText.frontPage));
+        }
+        if(lang==="english"){
+            return JSON.parse(JSON.stringify(englishText.frontPage));
+        }
+        else{
+            return JSON.parse(JSON.stringify(russianText.frontPage));
+        }
+    }
     
     const  scrollAndUpdateDown=()=> {
 
@@ -62,12 +70,10 @@ function TextInserter (){
     {isLeftToRight()?<div>
             <h1 className='titleFont frontPageEnTitle'>{lang==="english"?'Sergi Courtyard':'реформирует'}</h1>
             <img alt='underline' src={headerUnderline} className='frontPageUnderline'/>
-          </div>:null}
+          </div>:<img alt='hebHeader' src={hebrewHeader} className='frontPageHeTitle'/>}
           {isTopScrollBtn?<img onClick={scrollAndUpdateUp} id="scrollBtnPng" src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topScrollOneEN':'topScrollOneHE'}/>:null}
             <p className={isLeftToRight()?'lefToRightTexstCss':'textCss'} id="openingTextBox"> 
-                {lang==="hebrew"?hebrewTextToShow
-                :lang==="english"?englishTextToshow
-                :russianTextToShow}
+                {whichFileToUse()}
             </p>
             {isButtomScrollBtn?<img onClick={scrollAndUpdateDown} id="scrollBtnPng" src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomScrollOneEN':'buttomScrollOneHE'}/>:null}
         </div>

@@ -221,6 +221,12 @@ font-family: titleFont;
     margin-left: 21%;
     margin-bottom: 0%;
 }
+.frontPageHeTitle{
+    height: 100px;
+    position: fixed;
+    top: 2%;
+    right: 6%;
+}
 .frontPageUnderline{
     margin-left: 18%;
 }

@@ -24,7 +24,7 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
 
         useEffect(
         () => {
-        timer(homeBtnLogic); 
+        timer(homeBtnLogic);
 
         return () => { // Return callback to run on unmount.
             

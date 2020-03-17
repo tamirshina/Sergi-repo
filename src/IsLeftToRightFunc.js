@@ -6,8 +6,6 @@ import LangContext from './SergiContext';
 function IsLeftToRight () {
 
     const { lang } = useContext(LangContext);
-
-
     
     if(lang==="english" || lang==="russian"){
         return true;

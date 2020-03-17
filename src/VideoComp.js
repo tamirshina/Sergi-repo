@@ -8,13 +8,10 @@ import './Styles.css';
 
 
 function VideoComp({playVideoLogic}) {
-  
 
   return (
     
-    <video onClick={playVideoLogic} id='zoomInVideo' poster={isLeftToRight()?leftVideoPoster:videoPoster} className='videoStyle'>
-        <source src={isLeftToRight()?videoZoomInEN:videoZoomInHE}></source>
-    </video>
+    <video onClick={playVideoLogic} id='zoomInVideo' src={isLeftToRight()?videoZoomInEN:videoZoomInHE} poster={isLeftToRight()?leftVideoPoster:videoPoster} className='videoStyle' />
   );
 }
 

@@ -5,9 +5,10 @@ import LangContext from './SergiContext';
 import russianText from './russianText';
 import englishText from './englishText';
 import hebrewText from './hebrewText';
-import headerUnderline from './14_Headerunderline.png';
 import {timer, removeTimer} from './TimerHundler';
 import upperTextArrow from './11_textArrowUP.png';
+import RighToLeftTitle from './RightToLeftTitle';
+import LeftToRightTitle from './LeftToRightTitle'
 import './Styles.css';
 
 function TextInserterParticular ({typeOfInfo, homeBtnLogic}){
@@ -76,20 +77,17 @@ function TextInserterParticular ({typeOfInfo, homeBtnLogic}){
 
  
   return (
-      <div className={isLeftToRight()?'infoTextBoxLeftToRight':'textBoxCss'}>
-        {isLeftToRight()?<div className='enInfoTitle'>
-            <h1 className='titleFont frontPageEnTitle'>{titleToInsert()}</h1>
-            <img alt='underline' src={headerUnderline} className='frontPageUnderline'/>
-          </div>:<div>
-            <h1 className='titleFont heInfoPageTitle'>{titleToInsert()}</h1>
-            <img alt='underline' src={headerUnderline} className='heInfoPageUnderline'/>
-          </div>}
-            {isTopScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateUp()}} src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topInfoScrollEn':'topScrollOneHE'}/>:null}
-            <p className={isLeftToRight()?'infoEnText':'textCss'} id="particularTextBox"> 
-                {infoToInsert()}
-            </p>
-            {isButtomScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateDown()}} src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomInfoScroll':'buttomScrollOneHE'}/>:null}
-        </div>
+
+            <div className={isLeftToRight()?'infoTextBoxLeftToRight':'textBoxCss'}>
+            {isLeftToRight()?
+            <LeftToRightTitle titleToInsert={titleToInsert()}/>:
+            <RighToLeftTitle titleToInsert={titleToInsert()}/>}
+                {isTopScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateUp()}} src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topInfoScrollEn':'topScrollOneHE'}/>:null}
+                <p className={isLeftToRight()?'infoEnText':'textCss'} id="particularTextBox"> 
+                    {infoToInsert()}
+                </p>
+                {isButtomScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateDown()}} src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomInfoScroll':'buttomScrollOneHE'}/>:null}
+            </div>
         );
 }
 

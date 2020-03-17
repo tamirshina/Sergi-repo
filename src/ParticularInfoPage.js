@@ -60,7 +60,7 @@ function ParticularInfoPage ({backBtnLogic, homeBtnLogic, typeOfParticularInfo})
             <img src={pictureToRender()} alt='backgroundImage' className='particularBackGround'></img>
             <button onClick={backBtnLogic} id='backBtn' className={isLeftToRight()?'backBtn':'backBtnRightToLeft'}>back</button>
             <HomeBtn homeBtnLogic={homeBtnLogic} />
-            <TextInserter typeOfInfo={typeOfParticularInfo} homeBtnLogic={homeBtnLogic}/>:<TextInserter/>}
+            <TextInserter typeOfInfo={typeOfParticularInfo} homeBtnLogic={homeBtnLogic}/>
           </>
         );
     

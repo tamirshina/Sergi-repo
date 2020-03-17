@@ -11,13 +11,12 @@ const LangContext = React.createContext({
 
   export function LangProvider (props) {
 
-    const [lang, setLang] = useState("hebrew");
+    const [lang, setLang] = useState("russian");
     
   
     useEffect(() => {
 
         setLang(lang);
-        console.log('mounted')
       
     }, [lang])
   

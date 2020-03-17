@@ -13,104 +13,37 @@ import './Styles.css';
 function TextInserterParticular ({typeOfInfo, homeBtnLogic}){
 
     const lang = useContext(LangContext).lang;
-    const [russianTextToShow] = useState(JSON.parse(JSON.stringify(russianText)));
-    const [englishTextToshow] = useState(JSON.parse(JSON.stringify(englishText)));
-    const [hebrewTextToShow] = useState(JSON.parse(JSON.stringify(hebrewText)));
+    const [isTopScrollBtn, setIsTopScrollBtn] = useState(false);
+    const [isButtomScrollBtn, setIsButtomScrollBtn] = useState(true);
     
     function resetTimer() {
         removeTimer();
         timer(homeBtnLogic);
-      }
+    }
+
+    function whichFileToUse (){
+        if(lang==="hebrew"){
+            return JSON.parse(JSON.stringify(hebrewText));
+        }
+        if(lang==="english"){
+            return JSON.parse(JSON.stringify(englishText));
+        }
+        else{
+            return JSON.parse(JSON.stringify(russianText));
+        }
+    }
 
     function infoToInsert (){
 
-        switch(typeOfInfo){
-
-            case "sergi":
-                if(lang==="hebrew"){
-                    return hebrewTextToShow.particularInfo.sergi;
-                }else if(lang==="english"){
-                    return englishTextToshow.particularInfo.sergi;
-                }
-                return russianTextToShow.particularInfo.sergi;
-            case "ella":
-                if(lang==="hebrew"){
-                    return hebrewTextToShow.particularInfo.ella;
-                }else if(lang==="english"){
-                    return englishTextToshow.particularInfo.ella;
-                }
-                return russianTextToShow.particularInfo.ella;            
-            case "known":
-                if(lang==="hebrew"){
-                    return hebrewTextToShow.particularInfo.famous;
-                }else if(lang==="english"){
-                    return englishTextToshow.particularInfo.famous;
-                }
-                return russianTextToShow.particularInfo.famous;
-            case "ogFinger":
-                if(lang==="hebrew"){                   
-                    return hebrewTextToShow.particularInfo.og;
-                }else if(lang==="english"){
-                    return englishTextToshow.particularInfo.og;
-                }
-                return russianTextToShow.particularInfo.og;
-            case "waterHoles":
-                if(lang==="hebrew"){
-                    return hebrewTextToShow.particularInfo.water;
-                }else if(lang==="english"){
-                    return englishTextToshow.particularInfo.water;
-                }
-                return russianTextToShow.particularInfo.water; 
-            default:
-              return englishTextToshow.particularInfo.sergi;
-        }
+        return whichFileToUse().particularInfo[typeOfInfo];
+            
     }
 
     function titleToInsert (){
 
-        switch(typeOfInfo){
-
-            case "sergi":
-                if(lang==="hebrew"){
-                    return hebrewTextToShow.titles.one;
-                }else if(lang==="english"){
-                    return englishTextToshow.titles.one;
-                }
-                return russianTextToShow.titles.one;
-            case "ella":
-                if(lang==="hebrew"){
-                    return hebrewTextToShow.titles.two;
-                }else if(lang==="english"){
-                    return englishTextToshow.titles.two;
-                }
-                return russianTextToShow.titles.two;            
-            case "known":
-                if(lang==="hebrew"){
-                    return hebrewTextToShow.titles.five;
-                }else if(lang==="english"){
-                    return englishTextToshow.titles.five;
-                }
-                return russianTextToShow.titles.five;
-            case "ogFinger":
-                if(lang==="hebrew"){
-                    return hebrewTextToShow.titles.three;
-                }else if(lang==="english"){
-                    return englishTextToshow.titles.three;
-                }
-                return russianTextToShow.titles.three;
-            case "waterHoles":
-                if(lang==="hebrew"){
-                    return hebrewTextToShow.titles.four;
-                }else if(lang==="english"){
-                    return englishTextToshow.titles.four;
-                }
-                return russianTextToShow.titles.four; 
-            default:
-              return englishTextToshow.particularInfo.sergi;
-        }
+        return whichFileToUse().titles[typeOfInfo];
+            
     }
-    const [isTopScrollBtn, setIsTopScrollBtn] = useState(false);
-    const [isButtomScrollBtn, setIsButtomScrollBtn] = useState(true);
     
     const  scrollAndUpdateDown=()=> {
 

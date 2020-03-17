@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
 import sergiPageImageEN from './06_sergiEnglish.png';
 import sergiImageHE from './04_sergiImageHe.png';
-import ellaPageImageEN from './06_sergiEnglish.png';
-import ellaImageHe from './04_sergiImageHe.png'
+import ellaPageImageEN from './17_Elizabeth-ENG.png';
+import ellaImageHe from './17_Elizabeth-HEB.png'
 import knownPageImageEN from './06_sergiEnglish.png';
 import knownImageHe from './04_sergiImageHe.png';
-import waterPageImageEN from './06_sergiEnglish.png';
-import waterImageHe from './04_sergiImageHe.png';
-import ogPageImageEN from './06_sergiEnglish.png';
-import ogImageHe from './04_sergiImageHe.png';
+import waterPageImageEN from './19_Water pits_HEB&ENG.png';
+import waterImageHe from './19_Water pits_HEB&ENG.png';
+import ogPageImageEN from './18_og finger_ENG.png';
+import ogImageHe from './18_og finger_HEB.png';
 import isLeftToRight from './IsLeftToRightFunc';
 import {timer, removeTimer} from './TimerHundler';
 import TextInserter from './TextInserterParticular';
@@ -36,24 +36,32 @@ function ParticularInfoPage ({backBtnLogic, homeBtnLogic, typeOfParticularInfo})
                 return isLeftToRight()? ellaPageImageEN:ellaImageHe;            
             case "known":
                 return isLeftToRight()?knownPageImageEN:knownImageHe; 
-            case "ogFinger":
+            case "og":
                 return isLeftToRight()?ogPageImageEN:ogImageHe; 
-            case "waterHoles":
+            case "water":
                 return isLeftToRight()?waterPageImageEN:waterImageHe; 
             default:
               return sergiPageImageEN;
         }
       }
+
+      function isFamous (){
+
+        if(typeOfParticularInfo==='known'){
+
+          return true;
+        }
+        return false;
+      }
  
   return (
-        <>
+
+          <>
             <img src={pictureToRender()} alt='backgroundImage' className='particularBackGround'></img>
             <button onClick={backBtnLogic} id='backBtn' className={isLeftToRight()?'backBtn':'backBtnRightToLeft'}>back</button>
             <HomeBtn homeBtnLogic={homeBtnLogic} />
-            <TextInserter typeOfInfo={typeOfParticularInfo} homeBtnLogic={homeBtnLogic}/>
-        
-        </>
-
+            <TextInserter typeOfInfo={typeOfParticularInfo} homeBtnLogic={homeBtnLogic}/>:<TextInserter/>}
+          </>
         );
     
 }

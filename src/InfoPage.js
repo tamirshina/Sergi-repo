@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, {useEffect, useContext, useState} from 'react';
-
-import InfoRoutingImage from './03_background-screen-02.png';
+import InfoRoutingImage from './03_screen2background.png';
 import {timer, removeTimer} from './TimerHundler';
 import LanguagesButtons from './LanguageButtons';
+import downHand from './20_downHand.png';
+import leftHand from './22_leftHand.png';
+import rightHand from './21_rightHand.png';
 import ScrollImage from './scrollImage';
 import LangContext from './SergiContext';
 import russianText from './russianText';
@@ -19,9 +21,6 @@ import './Styles.css';
 function InfoPage({moveToParticularInfo, homeBtnLogic}) {
 
     const lang = useContext(LangContext).lang;
-    const [russianTitlesToShow] = useState(JSON.parse(JSON.stringify(russianText)).titles);
-    const [englishTitelsToshow] = useState(JSON.parse(JSON.stringify(englishText)).titles);
-    const [hebrewTitelsToShow] = useState(JSON.parse(JSON.stringify(hebrewText)).titles);
 
         useEffect(
         () => {
@@ -34,8 +33,17 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
         }, []);
 
-
-
+        function whichFileToUse (){
+            if(lang==="hebrew"){
+                return JSON.parse(JSON.stringify(hebrewText)).titles;
+            }
+            if(lang==="english"){
+                return JSON.parse(JSON.stringify(englishText)).titles;
+            }
+            else{
+                return JSON.parse(JSON.stringify(russianText)).titles;
+            }
+        }
  
     return (
 
@@ -44,42 +52,24 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
         <img src={InfoRoutingImage} className='infoBackground'></img>
         <HomeBtn homeBtnLogic={homeBtnLogic} />
             <div id='sergi' onClick={moveToParticularInfo} className='sergiTitle addTitleFont'>
-            <h1>{lang==="hebrew"?hebrewTitelsToShow.one
-                :lang==="english"?englishTitelsToshow.one
-                :russianTitlesToShow.one}</h1>
-            <ScrollImage />
+            <h1>{whichFileToUse().sergi}</h1>
+            <img src={rightHand} alt='hand' />
             </div>
             <div id='ella' onClick={moveToParticularInfo} className='ellaTitle addTitleFont'>
-                <h1>
-                    {lang==="hebrew"?hebrewTitelsToShow.two
-                    :lang==="english"?englishTitelsToshow.two
-                    :russianTitlesToShow.two}
-                </h1>
-                <ScrollImage />
+                <h1>{whichFileToUse().ella}</h1>
+                <img src={leftHand} alt='hand' />
             </div>
             <div id='known' onClick={moveToParticularInfo} className='knownTitle addTitleFont'>
-                <h1>
-                    {lang==="hebrew"?hebrewTitelsToShow.five
-                    :lang==="english"?englishTitelsToshow.five
-                    :russianTitlesToShow.five}
-                </h1>
-                <ScrollImage />
+                <h1>{whichFileToUse().known}</h1>
+                <img src={downHand} alt='hand' />
             </div>
-            <div id='ogFinger' onClick={moveToParticularInfo} className='ogTitle addTitleFont'>
-                 <h1 className='ogHeadline'>
-                    {lang==="hebrew"?hebrewTitelsToShow.three
-                    :lang==="english"?englishTitelsToshow.three
-                    :russianTitlesToShow.three}
-                </h1>
-                <ScrollImage />
+            <div id='og' onClick={moveToParticularInfo} className='ogTitle addTitleFont'>
+                 <h1>{whichFileToUse().og}</h1>
+                <img src={downHand} alt='hand' />
             </div>
-            <div id='waterHoles' onClick={moveToParticularInfo} className='waterTitle addTitleFont'>
-                <h1>
-                    {lang==="hebrew"?hebrewTitelsToShow.four
-                    :lang==="english"?englishTitelsToshow.four
-                    :russianTitlesToShow.four}
-                </h1>
-                <ScrollImage />
+            <div id='water' onClick={moveToParticularInfo} className='waterTitle addTitleFont'>
+                <h1>{whichFileToUse().water}</h1>
+                <img src={downHand} alt='hand' />
             </div>
     </div>
     

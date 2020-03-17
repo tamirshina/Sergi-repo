@@ -88,23 +88,23 @@ body, html {
 }
 .sergiTitle{
     position: fixed;
-    top: 82px;
-    left: 215px;
-}
-.ellaTitle{
-    position: fixed;
-    top: 134px;
-    left: 507px;
-}
-.knownTitle{
-    position: fixed;
     top: 150px;
     right: 150px;
 }
-.ogTitle{
+.ellaTitle{
     position: fixed;
     top: 184px;
     left: 40px;
+}
+.knownTitle{
+    position: fixed;
+    top: 82px;
+    left: 215px;
+}
+.ogTitle{
+    position: fixed;
+    top: 134px;
+    left: 507px;
 }
 .ogHeadline{
     position: relative;
@@ -277,4 +277,9 @@ font-family: titleFont;
     left: 16%;
     top: 11%;
     display: grid;
+}
+.activeBtn{
+
+border: 1px solid rgb(86, 180, 239);
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
 }

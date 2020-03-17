@@ -1,66 +1,79 @@
-useEffect(() => {
-    const videoElement = document.getElementById('zoomInVideo');
+switch(typeOfInfo){
 
-    if(videoElement){
-
-      videoElement.requestFullscreen().catch(err => {
-      alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);;
-      });
-    }
-  });
-
-
-
-  switch(lang){
-
-            case "hebrew":
-                languages=languages.hebrew;
-                break;
-            case "russian":
-                languages=languages.russian;
-                break;
-            case "english":
-                languages=languages.elglish;
-                break;
+            case "sergi":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.particularInfo.sergi;
+                }else if(lang==="english"){
+                    return englishTextToshow.particularInfo.sergi;
+                }
+                return russianTextToShow.particularInfo.sergi;
+            case "ella":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.particularInfo.ella;
+                }else if(lang==="english"){
+                    return englishTextToshow.particularInfo.ella;
+                }
+                return russianTextToShow.particularInfo.ella;            
+            case "known":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.particularInfo.famous;
+                }else if(lang==="english"){
+                    return englishTextToshow.particularInfo.famous;
+                }
+                return russianTextToShow.particularInfo.famous;
+            case "ogFinger":
+                if(lang==="hebrew"){                   
+                    return hebrewTextToShow.particularInfo.og;
+                }else if(lang==="english"){
+                    return englishTextToshow.particularInfo.og;
+                }
+                return russianTextToShow.particularInfo.og;
+            case "waterHoles":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.particularInfo.water;
+                }else if(lang==="english"){
+                    return englishTextToshow.particularInfo.water;
+                }
+                return russianTextToShow.particularInfo.water; 
             default:
-                languages=languages.hebrew;
+              return englishTextToshow.particularInfo.sergi;
+        }
 
-                
-// export let languages = {
-//     russian: {},
-//     elglish: {},
-//     hebrew: {},
-//   };
-
-//   export let languages = ['hebrew', 'russian', 'english']
-  
-//   export const LanguageContext = React.createContext({
-//     language: languages[0],//defualt value
-//     setLanguage: () => {},
-    
-//   });
-
-
-import React, {useContext} from 'react';
-import LangContext from './SergiContext';
-import russianText from './russianText';
-import englishText from './englishText';
-import hebrewText from './hebrewText';
-
-
-function IsLeftToRight () {
-
-    const { lang } = useContext(LangContext);
-
-
-    
-    if(lang==="english"){
-        return englishText;
-    }
-    else if (lang==="russian")
-    {}
-    
-    
-  }
-
-  export default IsLeftToRight;
+                    case "sergi":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.titles.one;
+                }else if(lang==="english"){
+                    return englishTextToshow.titles.one;
+                }
+                return russianTextToShow.titles.one;
+            case "ella":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.titles.two;
+                }else if(lang==="english"){
+                    return englishTextToshow.titles.two;
+                }
+                return russianTextToShow.titles.two;            
+            case "known":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.titles.five;
+                }else if(lang==="english"){
+                    return englishTextToshow.titles.five;
+                }
+                return russianTextToShow.titles.five;
+            case "ogFinger":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.titles.three;
+                }else if(lang==="english"){
+                    return englishTextToshow.titles.three;
+                }
+                return russianTextToShow.titles.three;
+            case "waterHoles":
+                if(lang==="hebrew"){
+                    return hebrewTextToShow.titles.four;
+                }else if(lang==="english"){
+                    return englishTextToshow.titles.four;
+                }
+                return russianTextToShow.titles.four; 
+            default:
+              return englishTextToshow.particularInfo.sergi;
+        }

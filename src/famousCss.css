@@ -1,0 +1,86 @@
+.raspotinImg{
+    left: 1490px; 
+    top: 658px; 
+    position: absolute; 
+    width: 264px;
+    height: 176px;
+}
+.koslevImg{
+    left: 1130px; 
+    top: 620px; 
+    position: absolute; 
+    width: 290px;
+    height: 205px;
+}
+.bailyImg{
+    left: 1108px; 
+    top: 304px; 
+    position: absolute; 
+    width: 154px;
+    height: 207px;
+}
+.pandovImg{
+    left: 791px; 
+    top: 612px; 
+    position: absolute; 
+    width: 303px;
+    height: 230px;
+}
+.sailorssImg{
+    left: 805px; 
+    top: 356px; 
+    position: absolute; 
+    width: 272px;
+    height: 204px;
+}
+.rapinImg{
+    left: 1291px; 
+    top: 345px; 
+    position: absolute; 
+    width: 253px;
+    height: 236px;
+}
+.arsenyImg{
+    left: 1578px; 
+    top: 340px; 
+    position: absolute; 
+    width: 167px;
+    height: 223px;
+}
+.famousPicDiv{
+    position: fixed;
+    top: 25%;
+    right: 10%;
+    width: 50%;
+}
+.famousImg{
+    height: 100px;
+    width: 150px;
+    margin: 10px 10px 10px 0;
+}
+.enFamousTitleContainer{
+    position: relative;
+    top: 10%;
+    left: 5%;
+}
+.enTitleFam{
+    margin: 0;
+}
+.hebrewFamousTitle{
+    position: relative;
+    left: 45%;
+    margin-bottom: 1%;
+}
+.famousHeText{
+    position: relative;
+    top:20%;
+    width: 80%;
+    left: 8%;
+}
+.famousAdjustText{
+    left: 4%;
+    width: 27%;
+}
+.famousUnderline{
+    width: 330px;
+}

@@ -15,7 +15,7 @@ import TextInserter from './TextInserterParticular';
 import './Styles.css';
 import HomeBtn from './HomeBtn';
 
-function NonFamous ({backBtnLogic, homeBtnLogic, typeOfParticularInfo}){
+function NonFamous ({tamir, backBtnLogic, homeBtnLogic, typeOfInfo}){
   
   useEffect(
         () => {
@@ -28,7 +28,7 @@ function NonFamous ({backBtnLogic, homeBtnLogic, typeOfParticularInfo}){
 
         function pictureToRender (){
 
-          switch(typeOfParticularInfo){
+          switch(typeOfInfo){
 
             case "sergi":
                 return isLeftToRight()? sergiPageImageEN:sergiImageHE;
@@ -50,7 +50,7 @@ function NonFamous ({backBtnLogic, homeBtnLogic, typeOfParticularInfo}){
             <img src={pictureToRender()} alt='backgroundImage' className='particularBackGround'></img>
             <button onClick={backBtnLogic} id='backBtn' className={isLeftToRight()?'backBtn':'backBtnRightToLeft'}>back</button>
             <HomeBtn homeBtnLogic={homeBtnLogic} />
-            <TextInserter typeOfInfo={typeOfParticularInfo} homeBtnLogic={homeBtnLogic}/>:<TextInserter/>}
+            <TextInserter typeOfInfo={typeOfInfo} homeBtnLogic={homeBtnLogic}/>
           </>
         );
     

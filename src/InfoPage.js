@@ -1,12 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, {useEffect, useContext, useState} from 'react';
+import React, {useEffect, useContext} from 'react';
 import InfoRoutingImage from './03_screen2background.png';
 import {timer, removeTimer} from './TimerHundler';
 import LanguagesButtons from './LanguageButtons';
 import downHand from './20_downHand.png';
 import leftHand from './22_leftHand.png';
 import rightHand from './21_rightHand.png';
-import ScrollImage from './scrollImage';
 import LangContext from './SergiContext';
 import russianText from './russianText';
 import englishText from './englishText';

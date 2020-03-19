@@ -7,7 +7,7 @@ function RightToLeftTitle ({titleToInsert}){
 
     return (
 
-        <div>
+        <div className='titleBoxHeb'>
             <h1 className='titleFont heInfoPageTitle'>{titleToInsert}</h1>
             <img alt='underline' src={headerUnderline} className='heInfoPageUnderline'/>
         </div>

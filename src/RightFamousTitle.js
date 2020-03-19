@@ -10,7 +10,7 @@ function RightFamousTitle ({titleToInsert}){
 
             <div className='enInfoTitle'>
                 <h1 className='hebrewFamousTitle'>{titleToInsert()}</h1>
-                <img alt='underline' src={headerUnderline} className='frontPageUnderline'/>
+                <img alt='underline' src={headerUnderline} className='famousHeUnderline'/>
             </div>
             );
 

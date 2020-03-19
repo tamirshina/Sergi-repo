@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import scrollBtn from './02_Continue-text-button-small.png';
 import isLeftToRight from './IsLeftToRightFunc';
 import LangContext from './SergiContext';
@@ -15,7 +15,13 @@ function TextInserterParticular ({typeOfInfo, homeBtnLogic}){
 
     const lang = useContext(LangContext).lang;
     const [isTopScrollBtn, setIsTopScrollBtn] = useState(false);
-    const [isButtomScrollBtn, setIsButtomScrollBtn] = useState(true);
+    const [isButtomScrollBtn, setIsButtomScrollBtn]=useState(false);
+
+    useEffect(() => {
+        // Update the document title using the browser API
+        isButtomScroll();
+      });
+    
     
     function resetTimer() {
         removeTimer();
@@ -36,17 +42,23 @@ function TextInserterParticular ({typeOfInfo, homeBtnLogic}){
 
     function infoToInsert (){
 
-        return whichFileToUse().particularInfo[typeOfInfo];
-            
+        return whichFileToUse().particularInfo[typeOfInfo];  
     }
-
     function titleToInsert (){
 
-        return whichFileToUse().titles[typeOfInfo];
-            
+        return whichFileToUse().titles[typeOfInfo];         
     }
-    
+    function isButtomScroll(){
+        let textBox = document.getElementById('particularTextBox')
+        let maxTextLength =textBox.scrollHeight-textBox.clientHeight;
+        if(textBox.scrollTop!==maxTextLength){
+            
+            setIsButtomScrollBtn(true);
+        }
+    }
     const  scrollAndUpdateDown=()=> {
+
+        resetTimer();
 
         let textBox = document.getElementById('particularTextBox')
         let maxTextLength =textBox.scrollHeight-textBox.clientHeight;
@@ -54,8 +66,6 @@ function TextInserterParticular ({typeOfInfo, homeBtnLogic}){
 
         if(textBox.scrollTop!== 0){
             setIsTopScrollBtn(true);
-        }else{
-            setIsTopScrollBtn(false);
         }
         if(textBox.scrollTop===maxTextLength){
             setIsButtomScrollBtn(false);
@@ -67,18 +77,16 @@ function TextInserterParticular ({typeOfInfo, homeBtnLogic}){
         let textBox = document.getElementById('particularTextBox')
         textBox.scrollTop-=10;
 
-        if(textBox.scrollTop!== 0){
-            setIsTopScrollBtn(true);
-        }else{
+        if(textBox.scrollTop=== 0){
             setIsTopScrollBtn(false);
+        }if(isButtomScrollBtn===false){
+            setIsButtomScrollBtn(true);
         }
     }
-    
-
  
   return (
 
-            <div className={isLeftToRight()?'infoTextBoxLeftToRight':'textBoxCss'}>
+            <div className={isLeftToRight()? null:'textBoxCss'}>
             {isLeftToRight()?
             <LeftToRightTitle titleToInsert={titleToInsert()}/>:
             <RighToLeftTitle titleToInsert={titleToInsert()}/>}

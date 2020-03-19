@@ -4,7 +4,6 @@ import InfoPage from './InfoPage';
 import TextInserter from './TextInserter';
 import ParticularInfo from './ParticularInfoPage';
 import LanguagesButtons from './LanguageButtons';
-import './App.css';
 
 function App() {
 

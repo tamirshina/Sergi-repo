@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, {useEffect} from 'react';
-import isLeftToRight from './IsLeftToRightFunc';
+import homeImg from './35-home.png';
 import './Styles.css';
 
 
@@ -9,14 +9,15 @@ function HomeBtn ({homeBtnLogic}) {
 
     useEffect(
         () => {
-            document.getElementById('homeBtn').disabled = true;
-            setTimeout(function(){ document.getElementById('homeBtn').disabled = false }, 2000);
+            if(document.getElementById('homeBtn')){
+                setTimeout(function(){ document.getElementById('homeBtn').style.visibility = 'visible' }, 3000);
+            }
         // eslint-disable-next-line react-hooks/exhaustive-deps
         }, []);
 
     return (
 
-        <button id='homeBtn' onClick={homeBtnLogic} className={isLeftToRight()?'homeBtn':'rightToLeftHomeBtn'} >Home</button>
+        <img src={homeImg} id='homeBtn' onClick={homeBtnLogic} className={'homeBtn'} />
     
     );
   }

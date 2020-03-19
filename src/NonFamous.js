@@ -5,17 +5,18 @@ import ellaPageImageEN from './17_Elizabeth-ENG.png';
 import ellaImageHe from './17_Elizabeth-HEB.png'
 import knownPageImageEN from './06_sergiEnglish.png';
 import knownImageHe from './04_sergiImageHe.png';
-import waterPageImageEN from './19_Water pits_HEB&ENG.png';
-import waterImageHe from './19_Water pits_HEB&ENG.png';
+import waterPageImageEN from './37-Water pitsENG.png';
+import waterImageHe from './19-Water pitsHEB.png';
 import ogPageImageEN from './18_og finger_ENG.png';
 import ogImageHe from './18_og finger_HEB.png';
 import isLeftToRight from './IsLeftToRightFunc';
 import {timer, removeTimer} from './TimerHundler';
 import TextInserter from './TextInserterParticular';
+import backImg from './32-back.png';
 import './Styles.css';
 import HomeBtn from './HomeBtn';
 
-function NonFamous ({tamir, backBtnLogic, homeBtnLogic, typeOfInfo}){
+function NonFamous ({backBtnLogic, homeBtnLogic, typeOfInfo}){
   
   useEffect(
         () => {
@@ -48,7 +49,7 @@ function NonFamous ({tamir, backBtnLogic, homeBtnLogic, typeOfInfo}){
   return (
           <>
             <img src={pictureToRender()} alt='backgroundImage' className='particularBackGround'></img>
-            <button onClick={backBtnLogic} id='backBtn' className={isLeftToRight()?'backBtn':'backBtnRightToLeft'}>back</button>
+            <img src={backImg} alt='backBtn' onClick={backBtnLogic} id='backBtn' className='backBtn'/>
             <HomeBtn homeBtnLogic={homeBtnLogic} />
             <TextInserter typeOfInfo={typeOfInfo} homeBtnLogic={homeBtnLogic}/>
           </>

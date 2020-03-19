@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import isLeftToRight from './IsLeftToRightFunc';
 import {timer, removeTimer} from './TimerHundler';
 import TextInserter from './FamousTextInserter';
 import famousBack from './24_famousBack.png';
 import ImageInserter from './ImagesInserter';
+import backImg from './32-back.png';
 import './Styles.css';
 import HomeBtn from './HomeBtn';
 
@@ -28,7 +28,7 @@ function FamousComp ({backBtnLogic, homeBtnLogic, typeOfParticularInfo}){
   return (
           <>
             <img src={famousBack} alt='backgroundImage' className='particularBackGround'></img>
-            <button onClick={backBtnLogic} id='backBtn' className={isLeftToRight()?'backBtn':'backBtnRightToLeft'}>back</button>
+            <img src={backImg} alt='backBtn' onClick={backBtnLogic} id='backBtn' className='backBtn'/>
             <HomeBtn homeBtnLogic={homeBtnLogic} />
             <ImageInserter changeType={changeText} />
             <TextInserter typeOfInfo={infoToShow} homeBtnLogic={homeBtnLogic}/>

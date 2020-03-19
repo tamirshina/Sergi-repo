@@ -11,6 +11,7 @@ import russianText from './russianText';
 import englishText from './englishText';
 import hebrewText from './hebrewText';
 import HomeBtn from './HomeBtn';
+import isLeftToRight from './IsLeftToRightFunc';
 import './Styles.css';
 
 
@@ -48,9 +49,9 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
 
     <div> 
         <LanguagesButtons />
-        <img src={InfoRoutingImage} className='infoBackground'></img>
+        <img src={InfoRoutingImage} className='fullBackground'></img>
         <HomeBtn homeBtnLogic={homeBtnLogic} />
-            <div id='sergi' onClick={moveToParticularInfo} className='sergiTitle addTitleFont'>
+            <div id='sergi' onClick={moveToParticularInfo} className={isLeftToRight()?'sergiTitle addTitleFont':'sergiTitle addTitleFont addSomeRight'}>
             <h1>{whichFileToUse().sergi}</h1>
             <img src={rightHand} alt='hand' />
             </div>

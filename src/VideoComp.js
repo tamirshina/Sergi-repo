@@ -11,7 +11,7 @@ function VideoComp({playVideoLogic}) {
 
   return (
     
-    <video onClick={playVideoLogic} id='zoomInVideo' src={isLeftToRight()?videoZoomInEN:videoZoomInHE} poster={isLeftToRight()?leftVideoPoster:videoPoster} className='videoStyle' />
+    <video onClick={playVideoLogic} id='zoomInVideo' src={isLeftToRight()?videoZoomInEN:videoZoomInHE} poster={isLeftToRight()?leftVideoPoster:videoPoster} className='fullBackground' />
   );
 }
 

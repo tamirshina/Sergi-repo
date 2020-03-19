@@ -1,28 +1,23 @@
 import React, {useContext} from 'react';
 import LangContext from './SergiContext';
+import englishBtn from './33-ENG.png';
+import hebrewBtn from './34-HEB.png';
+import russianBtn from './36-RUS.png';
 import './Styles.css';
 
 
 function LanguageButtons () {
 
-    const { switchLang, lang } = useContext(LangContext);
-
-    function isLeftToRight() {
-        
-        if(lang==="english" || lang==="russian"){
-            return true;
-        }
-        return false;
-      }
+    const { switchLang } = useContext(LangContext);
 
     return (
-        <div id='languagesBtnsDiv' className={isLeftToRight()?'leftToRightLangDiv':'languagesDiv'}>
+        <div id='languagesBtnsDiv' className='languagesDiv'>
 
-        <button  onClick={() => {switchLang("hebrew");}} className={lang==='hebrew'?'activeBtn':null} >Hebrew</button>
+        <img src={hebrewBtn} alt='hebrewBtn' onClick={() => {switchLang("hebrew");}} className='addMargin'/>
 
-        <button onClick={() => {switchLang("russian");}} className={lang==='russian'?'activeBtn':null}>Russian</button>
+        <img src={russianBtn} alt='russianBtn' onClick={() => {switchLang("russian");}} className='addMargin'/>
 
-        <button onClick={() => {switchLang("english");}} className={lang==='english'?'activeBtn':null}>English</button>
+        <img src={englishBtn} alt='englishBtn' onClick={() => {switchLang("english");}} className='addMargin'/>
 
         </div>
     

@@ -10,21 +10,11 @@ body, html {
   ::-webkit-scrollbar {
     display: none;
 }
-
-.infoBackground{
-
-    height: -webkit-fill-available;
-    object-fit: fill;
-    width: 100%;
-
-}
-
-.videoStyle{
+.fullBackground{
     height: -webkit-fill-available;
     object-fit: fill;
     width: 100%;
 }
-
 .textBoxCss{
     position: fixed;
     top: 15%;
@@ -43,26 +33,39 @@ body, html {
     top: 15px;
     width: 304px;
     height: 325px;
-    
 }
-.textCss{
-    
+.leftTitleFront{
+    position: relative;
+    left: 105px;
+    top: 59px;
+}
+.textHeFront{
     text-align: right;
     line-height: 1.6;
-    height: 325px;
-    overflow: hidden;
+    height: 670px;
+    overflow: scroll;
+    font-family: fantasy;
+}
+.textCss{
+    text-align: right;
+    line-height: 1.6;
+    position: relative;
+    top: 3%;
+    height: 670px;
+    overflow: scroll;
     font-family: fantasy;
 }
 .lefToRightTexstCss{
     font-family: fantasy;
+    font-size: 21px;
     text-align: left;
     line-height: 1.6;
-    overflow: hidden;
+    overflow: scroll;
     left: 6%;
-    top: 20%;
+    top: 17%;
     position: fixed;
     width: 34%;
-    height: 55%;
+    height: 63%;
 }
 .buttomScrollOneHE{
     position: relative;
@@ -71,8 +74,8 @@ body, html {
 }
 .buttomScrollOneEN {
     position: absolute;
-    bottom: -220px;
-    right: 83px;
+    left: 102%;
+    top: 260%;
 }
 .topScrollOneHE{
     position: relative;
@@ -82,29 +85,29 @@ body, html {
 }
 .topScrollOneEN{
     position: fixed;
-    left: 10%;
-    top: 17%;
+    left: 20%;
+    top: 15%;
     height: 20px;
 }
 .sergiTitle{
     position: fixed;
-    top: 150px;
-    right: 150px;
+    top: 40%;
+    right: 10%;
 }
 .ellaTitle{
     position: fixed;
-    top: 184px;
-    left: 40px;
+    top: 40%;
+    left: 7%;
 }
 .knownTitle{
     position: fixed;
-    top: 82px;
-    left: 215px;
+    top: 29%;
+    left: 47%;
 }
 .ogTitle{
     position: fixed;
-    top: 134px;
-    left: 507px;
+    top: 20%;
+    right: 27%;
 }
 .ogHeadline{
     position: relative;
@@ -112,8 +115,8 @@ body, html {
 }
 .waterTitle{
     position: fixed;
-    left: 41%;
-    bottom: -19%;
+    left: 47%;
+    bottom: 9%;
 }
 .linkBtnCss{
     position: relative;
@@ -129,32 +132,14 @@ body, html {
 
 .backBtn{
     position: fixed;
-    top: 50px;
-    right: 68px;
-    width: 80px;
-    height: 30px;
-}
-.backBtnRightToLeft{
-    position: fixed;
-    top: 50px;
-    left : 68px;
-    width: 80px;
-    height: 30px;
+    bottom: 11px;
+    right: 270px;
 }
 .homeBtn{
     position: fixed;
-    top: 50px;
+    bottom: 15px;
     right: 200px;
-    width: 80px;
-    height: 30px;
-}
-.rightToLeftHomeBtn{
-
-    position: fixed;
-    top: 50px;
-    left: 200px;
-    width: 80px;
-    height: 30px;
+    visibility: hidden;
 }
 .arrowHolder{
     position: fixed;
@@ -163,10 +148,11 @@ body, html {
 }
 .languagesDiv{
     position: fixed;
-    top:150px;
-    display: grid;
+    display: flex;
     grid-row-gap: 8px;
     z-index: 99;
+    bottom: 25px;
+    left: 40px;
 }
 
 .leftToRightLangDiv{
@@ -218,21 +204,16 @@ body, html {
 font-family: titleFont;
 }
 .frontPageEnTitle{
-    margin-left: 21%;
     margin-bottom: 0%;
 }
 .frontPageHeTitle{
     height: 100px;
     position: fixed;
-    top: 2%;
-    right: 6%;
-}
-.frontPageUnderline{
-    margin-left: 18%;
+    top: 8%;
+    right: 5%;
 }
 .heInfoPageTitle{
-    float: right;
-    /* margin-right: 9%; */
+    margin-left: 27px;
     margin-bottom: 0%;
 }
 .heInfoPageUnderline{
@@ -241,18 +222,18 @@ font-family: titleFont;
 }
 .enInfoTitle{
     position: fixed;
-    left: 2%;
-    top: 14%;
+    left: 9%;
+    top: 18%;
 }
 .infoEnText{
     font-family: fantasy;
     position: fixed;
     left: 8%;
-    top: 33%;
+    top: 28%;
     width: 31%;
     line-height: 1.6;
-    height: 46%;
-    overflow: hidden;
+    height: 52%;
+    overflow: scroll;
 }
 .infoTextBoxLeftToRight{
 
@@ -262,20 +243,20 @@ font-family: titleFont;
     height: 325px;
 }
 .buttomInfoScroll{
-    position: absolute;
-    bottom: -53%;
-    right: 83px;
+    position: fixed;
+    bottom: 4%;
+    left: 18%;
 }
 .topInfoScrollEn{
     position: fixed;
-    left: 18%;
-    top: 29%;
+    left: 22%;
+    top: 26%;
     height: 20px;
 }
 .handFrontContainer{
     position: absolute;
-    right: 4%;
-    top: 4%;
+    right: 8%;
+    top: 9%;
     display: grid;
 }
 .heHandFrontContainer{
@@ -288,4 +269,15 @@ font-family: titleFont;
 
 border: 1px solid rgb(86, 180, 239);
 box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
+}
+.addSomeRight{
+    right: 6%;
+}
+.titleBoxHeb{
+    display: grid;
+    position: relative;
+    left: 55%;
+}
+.addMargin{
+    margin-right: 15px;
 }

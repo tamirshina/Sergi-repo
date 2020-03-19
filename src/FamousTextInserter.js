@@ -9,7 +9,6 @@ import {timer, removeTimer} from './TimerHundler';
 import upperTextArrow from './11_textArrowUP.png';
 import LeftFamousTitle from './LeftFamousTitle';
 import RightFamousTitle from './RightFamousTitle';
-import './Styles.css';
 import './famousCss.css';
 
 function FamousTextInserter ({typeOfInfo, homeBtnLogic}){
@@ -93,7 +92,7 @@ function FamousTextInserter ({typeOfInfo, homeBtnLogic}){
             :
             <RightFamousTitle titleToInsert={titleToInsert} /> }
                 {isTopScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateUp()}} src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topInfoScrollEn':'topScrollOneHE'}/>:null}
-                <p className={isLeftToRight()?'infoEnText famousAdjustText':'textCss famousHeText'} id="particularTextBox"> 
+                <p className={isLeftToRight()?'infoEnText famousAdjustText':'famousHeText'} id="particularTextBox"> 
                     {infoToInsert()}
                 </p>
                 {isButtomScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateDown()}} src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomInfoScroll':'buttomScrollOneHE'}/>:null}

@@ -40,8 +40,6 @@ function TextInserter (){
 
         if(textBox.scrollTop!== 0){
             setIsTopScrollBtn(true);
-        }else{
-            setIsTopScrollBtn(false);
         }
         if(textBox.scrollTop===maxTextLength){
             setIsButtomScrollBtn(false);
@@ -53,10 +51,10 @@ function TextInserter (){
         let textBox = document.getElementById('openingTextBox')
         textBox.scrollTop-=10;
 
-        if(textBox.scrollTop!== 0){
-            setIsTopScrollBtn(true);
-        }else{
+        if(textBox.scrollTop=== 0){
             setIsTopScrollBtn(false);
+        }if(isButtomScrollBtn===false){
+            setIsButtomScrollBtn(true);
         }
     }
  
@@ -67,12 +65,12 @@ function TextInserter (){
         <img src={isLeftToRight()?handArrowEn:handArrowHE} alt='handArrow' className={isLeftToRight()?'handArrowEn':'handArrowHe'}/>
     </div>
     <div className={isLeftToRight()?'leftToRightTextBox':'textBoxCssFront'}>
-    {isLeftToRight()?<div>
+    {isLeftToRight()?<div className='leftTitleFront'>
             <h1 className='titleFont frontPageEnTitle'>{lang==="english"?'Sergi Courtyard':'реформирует'}</h1>
-            <img alt='underline' src={headerUnderline} className='frontPageUnderline'/>
+            <img alt='underline' src={headerUnderline}/>
           </div>:<img alt='hebHeader' src={hebrewHeader} className='frontPageHeTitle'/>}
           {isTopScrollBtn?<img onClick={scrollAndUpdateUp} id="scrollBtnPng" src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topScrollOneEN':'topScrollOneHE'}/>:null}
-            <p className={isLeftToRight()?'lefToRightTexstCss':'textCss'} id="openingTextBox"> 
+            <p className={isLeftToRight()?'lefToRightTexstCss':'textHeFront'} id="openingTextBox"> 
                 {whichFileToUse()}
             </p>
             {isButtomScrollBtn?<img onClick={scrollAndUpdateDown} id="scrollBtnPng" src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomScrollOneEN':'buttomScrollOneHE'}/>:null}

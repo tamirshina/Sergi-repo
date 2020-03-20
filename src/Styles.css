@@ -1,283 +1,281 @@
-
 @font-face {
-    font-family: titleFont;
-    src: url('./VarelaRound-Regular.ttf') format('truetype');
-  }
+  font-family: titleFont;
+  src: url('./VarelaRound-Regular.ttf') format('truetype');
+}
 
-body, html {
-    height: 100%;
-  }
-  ::-webkit-scrollbar {
-    display: none;
+body,
+html {
+  height: 100%;
 }
-.fullBackground{
-    height: -webkit-fill-available;
-    object-fit: fill;
-    width: 100%;
+::-webkit-scrollbar {
+  display: none;
 }
-.textBoxCss{
-    position: fixed;
-    top: 15%;
-    right: 6%;
-    width: 34%;
-    display: grid;
+.fullBackground {
+  height: -webkit-fill-available;
+  object-fit: fill;
+  width: 100%;
 }
-.textBoxCssFront{
-    position: fixed;
-    top: 18%;
-    right: 6%;
-    width: 29%;
+.textBoxCss {
+  position: fixed;
+  top: 15%;
+  right: 6%;
+  width: 34%;
+  display: grid;
 }
-.leftToRightTextBox{
-    position: fixed;
-    top: 15px;
-    width: 304px;
-    height: 325px;
+.textBoxCssFront {
+  position: fixed;
+  top: 18%;
+  right: 6%;
+  width: 29%;
 }
-.leftTitleFront{
-    position: relative;
-    left: 105px;
-    top: 59px;
+.leftToRightTextBox {
+  position: fixed;
+  top: 15px;
+  width: 304px;
+  height: 325px;
 }
-.textHeFront{
-    text-align: right;
-    line-height: 1.6;
-    height: 670px;
-    overflow: scroll;
-    font-family: fantasy;
+.leftTitleFront {
+  position: relative;
+  left: 105px;
+  top: 59px;
 }
-.textCss{
-    text-align: right;
-    line-height: 1.6;
-    position: relative;
-    top: 3%;
-    height: 670px;
-    overflow: scroll;
-    font-family: fantasy;
+.textHeFront {
+  text-align: right;
+  line-height: 1.6;
+  height: 670px;
+  overflow: hidden;
+  font-family: fantasy;
+  scroll-behavior: smooth;
 }
-.lefToRightTexstCss{
-    font-family: fantasy;
-    font-size: 21px;
-    text-align: left;
-    line-height: 1.6;
-    overflow: scroll;
-    left: 6%;
-    top: 17%;
-    position: fixed;
-    width: 34%;
-    height: 63%;
+.textCss {
+  text-align: right;
+  line-height: 1.6;
+  position: relative;
+  top: 3%;
+  height: 670px;
+  overflow: scroll;
+  font-family: fantasy;
 }
-.buttomScrollOneHE{
-    position: relative;
-    top: -38px;
-    left: 37%;
+.lefToRightTexstCss {
+  font-family: fantasy;
+  font-size: 21px;
+  text-align: left;
+  line-height: 1.6;
+  overflow: hidden;
+  left: 6%;
+  top: 17%;
+  position: fixed;
+  width: 34%;
+  height: 63%;
+  scroll-behavior: smooth;
+}
+.buttomScrollOneHE {
+  position: relative;
+  top: -38px;
+  left: 37%;
 }
 .buttomScrollOneEN {
-    position: absolute;
-    left: 102%;
-    top: 260%;
+  position: absolute;
+  left: 102%;
+  top: 260%;
 }
-.topScrollOneHE{
-    position: relative;
-    left: 50%;
-    top: 40%;
-    height: 20px;
+.topScrollOneHE {
+  position: relative;
+  left: 50%;
+  top: 40%;
+  height: 20px;
 }
-.topScrollOneEN{
-    position: fixed;
-    left: 20%;
-    top: 15%;
-    height: 20px;
+.topScrollOneEN {
+  position: fixed;
+  left: 20%;
+  top: 15%;
+  height: 20px;
 }
-.sergiTitle{
-    position: fixed;
-    top: 40%;
-    right: 10%;
+.sergiTitle {
+  position: fixed;
+  top: 40%;
+  right: 10%;
 }
-.ellaTitle{
-    position: fixed;
-    top: 40%;
-    left: 7%;
+.ellaTitle {
+  position: fixed;
+  top: 40%;
+  left: 7%;
 }
-.knownTitle{
-    position: fixed;
-    top: 29%;
-    left: 47%;
+.knownTitle {
+  position: fixed;
+  top: 29%;
+  left: 47%;
 }
-.ogTitle{
-    position: fixed;
-    top: 20%;
-    right: 27%;
+.ogTitle {
+  position: fixed;
+  top: 20%;
+  right: 27%;
 }
-.ogHeadline{
-    position: relative;
-    left: 30%;
+.ogHeadline {
+  position: relative;
+  left: 30%;
 }
-.waterTitle{
-    position: fixed;
-    left: 47%;
-    bottom: 9%;
+.waterTitle {
+  position: fixed;
+  left: 47%;
+  bottom: 9%;
 }
-.linkBtnCss{
-    position: relative;
-    top: -70px;
-    right: -18%;
+.linkBtnCss {
+  position: relative;
+  top: -70px;
+  right: -18%;
 }
-.particularBackGround{
-
-    height: -webkit-fill-available;
-    object-fit: fill;
-    width: 100%;
-}
-
-.backBtn{
-    position: fixed;
-    bottom: 11px;
-    right: 270px;
-}
-.homeBtn{
-    position: fixed;
-    bottom: 15px;
-    right: 200px;
-    visibility: hidden;
-}
-.arrowHolder{
-    position: fixed;
-    right: 100px;
-    bottom: 0px;
-}
-.languagesDiv{
-    position: fixed;
-    display: flex;
-    grid-row-gap: 8px;
-    z-index: 99;
-    bottom: 25px;
-    left: 40px;
+.particularBackGround {
+  height: -webkit-fill-available;
+  object-fit: fill;
+  width: 100%;
 }
 
-.leftToRightLangDiv{
- 
-    position: fixed;
-    top:150px;
-    right: 70px;
-    display: grid;
-    grid-row-gap: 8px;
-    z-index: 99;
+.backBtn {
+  position: fixed;
+  bottom: 11px;
+  right: 270px;
+}
+.homeBtn {
+  position: fixed;
+  bottom: 15px;
+  right: 200px;
+  visibility: hidden;
+}
+.arrowHolder {
+  position: fixed;
+  right: 100px;
+  bottom: 0px;
+}
+.languagesDiv {
+  position: fixed;
+  display: flex;
+  grid-row-gap: 8px;
+  z-index: 99;
+  bottom: 25px;
+  left: 40px;
 }
 
-.topScrollBtnCss{
-    position: relative;
-    height: 150px;
-    margin-bottom: -131px;
-    top: -67px;
-    left: 83px;
+.leftToRightLangDiv {
+  position: fixed;
+  top: 150px;
+  right: 70px;
+  display: grid;
+  grid-row-gap: 8px;
+  z-index: 99;
 }
-.addTitleFont{
-    font-family: titleFont;
-}
-.gateHandEn{
-    width: 249px;
-    height: 21px;
-}
-.gateHandHE{
-    left: 711px; 
-    top: 182px; 
-    position: absolute; 
-    width: 165px;
-    height: 32px;
-}
-.handArrowEn{
-    position: relative;
-    left: -14%;
-    top: 20%;
-    width: 108px;
-    height: 83px;
-}
-.handArrowHe{
-    position: relative;
-    top: 19%;
-    left: 55%;
-    width: 115px;
-    height: 70px;
-}
-.titleFont{
-font-family: titleFont;
-}
-.frontPageEnTitle{
-    margin-bottom: 0%;
-}
-.frontPageHeTitle{
-    height: 100px;
-    position: fixed;
-    top: 8%;
-    right: 5%;
-}
-.heInfoPageTitle{
-    margin-left: 27px;
-    margin-bottom: 0%;
-}
-.heInfoPageUnderline{
 
-    float: right;
+.topScrollBtnCss {
+  position: relative;
+  height: 150px;
+  margin-bottom: -131px;
+  top: -67px;
+  left: 83px;
 }
-.enInfoTitle{
-    position: fixed;
-    left: 9%;
-    top: 18%;
+.addTitleFont {
+  font-family: titleFont;
 }
-.infoEnText{
-    font-family: fantasy;
-    position: fixed;
-    left: 8%;
-    top: 28%;
-    width: 31%;
-    line-height: 1.6;
-    height: 52%;
-    overflow: scroll;
+.gateHandEn {
+  width: 249px;
+  height: 21px;
 }
-.infoTextBoxLeftToRight{
-
-    position: fixed;
-    top: 16%;
-    width: 33%;
-    height: 325px;
+.gateHandHE {
+  left: 711px;
+  top: 182px;
+  position: absolute;
+  width: 165px;
+  height: 32px;
 }
-.buttomInfoScroll{
-    position: fixed;
-    bottom: 4%;
-    left: 18%;
+.handArrowEn {
+  position: relative;
+  left: -14%;
+  top: 20%;
+  width: 108px;
+  height: 83px;
 }
-.topInfoScrollEn{
-    position: fixed;
-    left: 22%;
-    top: 26%;
-    height: 20px;
+.handArrowHe {
+  position: relative;
+  top: 19%;
+  left: 55%;
+  width: 115px;
+  height: 70px;
 }
-.handFrontContainer{
-    position: absolute;
-    right: 8%;
-    top: 9%;
-    display: grid;
+.titleFont {
+  font-family: titleFont;
 }
-.heHandFrontContainer{
-    position: absolute;
-    left: 16%;
-    top: 11%;
-    display: grid;
+.frontPageEnTitle {
+  margin-bottom: 0%;
 }
-.activeBtn{
-
-border: 1px solid rgb(86, 180, 239);
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(82, 168, 236, 0.6);
+.frontPageHeTitle {
+  height: 100px;
+  position: fixed;
+  top: 8%;
+  right: 5%;
 }
-.addSomeRight{
-    right: 6%;
+.heInfoPageTitle {
+  margin-left: 27px;
+  margin-bottom: 0%;
 }
-.titleBoxHeb{
-    display: grid;
-    position: relative;
-    left: 55%;
+.heInfoPageUnderline {
+  float: right;
 }
-.addMargin{
-    margin-right: 15px;
+.enInfoTitle {
+  position: fixed;
+  left: 9%;
+  top: 18%;
+}
+.infoEnText {
+  font-family: fantasy;
+  position: fixed;
+  left: 8%;
+  top: 28%;
+  width: 31%;
+  line-height: 1.6;
+  height: 52%;
+  overflow: scroll;
+}
+.infoTextBoxLeftToRight {
+  position: fixed;
+  top: 16%;
+  width: 33%;
+  height: 325px;
+}
+.buttomInfoScroll {
+  position: fixed;
+  bottom: 4%;
+  left: 18%;
+}
+.topInfoScrollEn {
+  position: fixed;
+  left: 22%;
+  top: 26%;
+  height: 20px;
+}
+.handFrontContainer {
+  position: absolute;
+  right: 8%;
+  top: 9%;
+  display: grid;
+}
+.heHandFrontContainer {
+  position: absolute;
+  left: 16%;
+  top: 11%;
+  display: grid;
+}
+.activeBtn {
+  border: 1px solid rgb(86, 180, 239);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset,
+    0px 0px 8px rgba(82, 168, 236, 0.6);
+}
+.addSomeRight {
+  right: 6%;
+}
+.titleBoxHeb {
+  display: grid;
+  position: relative;
+  left: 55%;
+}
+.addMargin {
+  margin-right: 15px;
 }

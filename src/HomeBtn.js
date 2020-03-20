@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/alt-text */
+
 import React, {useEffect} from 'react';
 import homeImg from './35-home.png';
 import './Styles.css';
@@ -17,7 +17,7 @@ function HomeBtn ({homeBtnLogic}) {
 
     return (
 
-        <img src={homeImg} id='homeBtn' onClick={homeBtnLogic} className={'homeBtn'} />
+        <img src={homeImg} alt='homeBtn' id='homeBtn' onClick={homeBtnLogic} className={'homeBtn'} />
     
     );
   }

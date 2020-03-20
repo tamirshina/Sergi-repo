@@ -1,15 +1,12 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef, useEffect } from 'react';
 import scrollBtn from './02_Continue-text-button-small.png';
+import FrontTitleft from './FrontTitleLeft';
 import isLeftToRight from './IsLeftToRightFunc';
 import LangContext from './SergiContext';
 import russianText from './russianText';
 import englishText from './englishText';
 import hebrewText from './hebrewText';
-import handArrowEn from './08_HendarrowENG.png';
-import handArrowHE from './12_handarrowHE.png';
-import seeMoreEN from './09_Touchtoseemore.png';
-import seeMoreHE from './13_extraInfoHe.png';
-import headerUnderline from './14_Headerunderline.png';
+import HandArrowFront from './HandArrowFront';
 import upperTextArrow from './11_textArrowUP.png';
 import hebrewHeader from './23_title_HEB.png';
 import './Styles.css';
@@ -19,6 +16,7 @@ function TextInserter (){
     const lang = useContext(LangContext).lang;
     const [isTopScrollBtn, setIsTopScrollBtn] = useState(false);
     const [isButtomScrollBtn, setIsButtomScrollBtn] = useState(true);
+
 
     function whichFileToUse (){
         if(lang==="hebrew"){
@@ -60,15 +58,11 @@ function TextInserter (){
  
   return (
     <>
-    <div className={isLeftToRight()?'handFrontContainer':'heHandFrontContainer'}>
-        <img src={isLeftToRight()?seeMoreEN:seeMoreHE} alt='handArrowTitle' className={isLeftToRight()?'gateHandEn':null}/>  
-        <img src={isLeftToRight()?handArrowEn:handArrowHE} alt='handArrow' className={isLeftToRight()?'handArrowEn':'handArrowHe'}/>
-    </div>
+    <HandArrowFront />
     <div className={isLeftToRight()?'leftToRightTextBox':'textBoxCssFront'}>
-    {isLeftToRight()?<div className='leftTitleFront'>
-            <h1 className='titleFont frontPageEnTitle'>{lang==="english"?'Sergi Courtyard':'реформирует'}</h1>
-            <img alt='underline' src={headerUnderline}/>
-          </div>:<img alt='hebHeader' src={hebrewHeader} className='frontPageHeTitle'/>}
+    {isLeftToRight()?
+    <FrontTitleft />:
+          <img alt='hebHeader' src={hebrewHeader} className='frontPageHeTitle'/>}
           {isTopScrollBtn?<img onClick={scrollAndUpdateUp} id="scrollBtnPng" src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topScrollOneEN':'topScrollOneHE'}/>:null}
             <p className={isLeftToRight()?'lefToRightTexstCss':'textHeFront'} id="openingTextBox"> 
                 {whichFileToUse()}

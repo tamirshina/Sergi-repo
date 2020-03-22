@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef, useEffect } from 'react';
+import React, { useContext, useRef } from 'react';
 import scrollBtn from './02_Continue-text-button-small.png';
 import FrontTitleft from './FrontTitleLeft';
 import isLeftToRight from './IsLeftToRightFunc';
@@ -14,9 +14,8 @@ import './Styles.css';
 function TextInserter (){
 
     const lang = useContext(LangContext).lang;
-    const [isTopScrollBtn, setIsTopScrollBtn] = useState(false);
-    const [isButtomScrollBtn, setIsButtomScrollBtn] = useState(true);
-
+    const upperScrollEl = useRef(null);
+    const bottomScrollEl = useRef(null);
 
     function whichFileToUse (){
         if(lang==="hebrew"){
@@ -37,10 +36,10 @@ function TextInserter (){
         textBox.scrollTop+=10;
 
         if(textBox.scrollTop!== 0){
-            setIsTopScrollBtn(true);
+            upperScrollEl.current.style.visibility = 'visible';
         }
         if(textBox.scrollTop===maxTextLength){
-            setIsButtomScrollBtn(false);
+            bottomScrollEl.current.style.visibility = 'hidden';
         }
     }
 
@@ -50,9 +49,9 @@ function TextInserter (){
         textBox.scrollTop-=10;
 
         if(textBox.scrollTop=== 0){
-            setIsTopScrollBtn(false);
-        }if(isButtomScrollBtn===false){
-            setIsButtomScrollBtn(true);
+            upperScrollEl.current.style.visibility = 'hidden';
+        }if(bottomScrollEl.current.style.visibility==='hidden'){
+            bottomScrollEl.current.style.visibility = 'visible';
         }
     }
  
@@ -63,11 +62,11 @@ function TextInserter (){
     {isLeftToRight()?
     <FrontTitleft />:
           <img alt='hebHeader' src={hebrewHeader} className='frontPageHeTitle'/>}
-          {isTopScrollBtn?<img onClick={scrollAndUpdateUp} id="scrollBtnPng" src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topScrollOneEN':'topScrollOneHE'}/>:null}
+          <img  ref={upperScrollEl} onClick={scrollAndUpdateUp} id="scrollBtnPng" src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topScrollOneEN':'topScrollOneHE'}/>
             <p className={isLeftToRight()?'lefToRightTexstCss':'textHeFront'} id="openingTextBox"> 
                 {whichFileToUse()}
             </p>
-            {isButtomScrollBtn?<img onClick={scrollAndUpdateDown} id="scrollBtnPng" src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomScrollOneEN':'buttomScrollOneHE'}/>:null}
+            <img ref={bottomScrollEl} onClick={scrollAndUpdateDown} id="scrollBtnPng" src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomScrollOneEN':'buttomScrollOneHE'}/>
         </div>
     </>
         );

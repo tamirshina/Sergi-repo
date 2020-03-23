@@ -78,6 +78,7 @@ body, html {
     top: 260%;
 }
 .topScrollOneHE{
+    visibility: hidden;
     position: relative;
     left: 50%;
     top: 40%;
@@ -249,6 +250,7 @@ font-family: titleFont;
     left: 18%;
 }
 .topInfoScrollEn{
+    visibility: hidden;
     position: fixed;
     left: 22%;
     top: 26%;

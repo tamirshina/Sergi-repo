@@ -14,6 +14,7 @@ import './Styles.css';
 function TextInserter (){
 
     const lang = useContext(LangContext).lang;
+    const textParaEl = useRef(null);
     const upperScrollEl = useRef(null);
     const bottomScrollEl = useRef(null);
 
@@ -31,24 +32,23 @@ function TextInserter (){
     
     const  scrollAndUpdateDown=()=> {
 
-        let textBox = document.getElementById('openingTextBox')
-        let maxTextLength =textBox.scrollHeight-textBox.clientHeight;
-        textBox.scrollTop+=10;
+        let maxTextLength =textParaEl.current.scrollHeight-textParaEl.current.clientHeight;
+        textParaEl.current.scrollTop+=10;
 
-        if(textBox.scrollTop!== 0){
+        if(textParaEl.current.scrollTop!== 0){
             upperScrollEl.current.style.visibility = 'visible';
         }
-        if(textBox.scrollTop===maxTextLength){
+        if(textParaEl.current.scrollTop===maxTextLength){
             bottomScrollEl.current.style.visibility = 'hidden';
         }
     }
 
     const  scrollAndUpdateUp=()=> {
 
-        let textBox = document.getElementById('openingTextBox')
-        textBox.scrollTop-=10;
+        
+        textParaEl.current.scrollTop-=10;
 
-        if(textBox.scrollTop=== 0){
+        if(textParaEl.current.scrollTop=== 0){
             upperScrollEl.current.style.visibility = 'hidden';
         }if(bottomScrollEl.current.style.visibility==='hidden'){
             bottomScrollEl.current.style.visibility = 'visible';
@@ -63,7 +63,7 @@ function TextInserter (){
     <FrontTitleft />:
           <img alt='hebHeader' src={hebrewHeader} className='frontPageHeTitle'/>}
           <img  ref={upperScrollEl} onClick={scrollAndUpdateUp} id="scrollBtnPng" src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topScrollOneEN':'topScrollOneHE'}/>
-            <p className={isLeftToRight()?'lefToRightTexstCss':'textHeFront'} id="openingTextBox"> 
+            <p ref={textParaEl} className={isLeftToRight()?'lefToRightTexstCss':'textHeFront'} id="openingTextBox"> 
                 {whichFileToUse()}
             </p>
             <img ref={bottomScrollEl} onClick={scrollAndUpdateDown} id="scrollBtnPng" src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomScrollOneEN':'buttomScrollOneHE'}/>

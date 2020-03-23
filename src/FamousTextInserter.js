@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useRef } from 'react';
 import scrollBtn from './02_Continue-text-button-small.png';
 import isLeftToRight from './IsLeftToRightFunc';
 import LangContext from './SergiContext';
@@ -14,18 +14,9 @@ import './famousCss.css';
 function FamousTextInserter ({typeOfInfo, homeBtnLogic}){
 
     const lang = useContext(LangContext).lang;
-    const [isTopScrollBtn, setIsTopScrollBtn] = useState(false);
-    const [isButtomScrollBtn, setIsButtomScrollBtn] = useState(true);
-
-    useEffect(() => {
-            if(document.getElementById('particularTextBox')){
-                let textBox = document.getElementById('particularTextBox');
-                let maxTextLength =textBox.scrollHeight-textBox.clientHeight;
-                if(textBox.scrollTop===maxTextLength){
-                    setIsButtomScrollBtn(false);
-                }           
-             }
-      }, []);
+    const textParaEl = useRef(null);
+    const upperScrollEl = useRef(null);
+    const bottomScrollEl = useRef(null);
     
     function resetTimer() {
         removeTimer();
@@ -58,29 +49,26 @@ function FamousTextInserter ({typeOfInfo, homeBtnLogic}){
     
     const  scrollAndUpdateDown=()=> {
 
-        let textBox = document.getElementById('particularTextBox');
-        let maxTextLength =textBox.scrollHeight-textBox.clientHeight;
-        textBox.scrollTop+=10;
+        let maxTextLength =textParaEl.current.scrollHeight-textParaEl.current.clientHeight;
+        textParaEl.current.scrollTop+=10;
 
-        if(textBox.scrollTop!== 0){
-            setIsTopScrollBtn(true);
-        }else{
-            setIsTopScrollBtn(false);
+        if(textParaEl.current.scrollTop!== 0){
+            upperScrollEl.current.style.visibility = 'visible';
         }
-        if(textBox.scrollTop===maxTextLength){
-            setIsButtomScrollBtn(false);
+        if(textParaEl.current.scrollTop===maxTextLength){
+            bottomScrollEl.current.style.visibility = 'hidden';
         }
     }
 
     const  scrollAndUpdateUp=()=> {
 
-        let textBox = document.getElementById('particularTextBox');
-        textBox.scrollTop-=10;
+        
+        textParaEl.current.scrollTop-=10;
 
-        if(textBox.scrollTop!== 0){
-            setIsTopScrollBtn(true);
-        }else{
-            setIsTopScrollBtn(false);
+        if(textParaEl.current.scrollTop=== 0){
+            upperScrollEl.current.style.visibility = 'hidden';
+        }if(bottomScrollEl.current.style.visibility==='hidden'){
+            bottomScrollEl.current.style.visibility = 'visible';
         }
     }
  
@@ -91,11 +79,11 @@ function FamousTextInserter ({typeOfInfo, homeBtnLogic}){
             <LeftFamousTitle titleToInsert={titleToInsert} />
             :
             <RightFamousTitle titleToInsert={titleToInsert} /> }
-                {isTopScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateUp()}} src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topInfoScrollEn':'topScrollOneHE'}/>:null}
-                <p className={isLeftToRight()?'infoEnText famousAdjustText':'famousHeText'} id="particularTextBox"> 
+                <img ref={textParaEl} onClick={()=>{resetTimer(); scrollAndUpdateUp()}} src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topInfoScrollEn':'topScrollOneHE'}/>
+                <p ref={textParaEl} className={isLeftToRight()?'infoEnText famousAdjustText':'famousHeText'} id="particularTextBox"> 
                     {infoToInsert()}
                 </p>
-                {isButtomScrollBtn?<img onClick={()=>{resetTimer(); scrollAndUpdateDown()}} src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomInfoScroll':'buttomScrollOneHE'}/>:null}
+                <img ref={bottomScrollEl} onClick={()=>{resetTimer(); scrollAndUpdateDown()}} src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomInfoScroll':'buttomScrollOneHE'}/>
             </div>
         );
 }

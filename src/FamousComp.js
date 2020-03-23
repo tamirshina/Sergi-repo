@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {timer, removeTimer} from './TimerHundler';
 import TextInserter from './FamousTextInserter';
-import famousBack from './24_famousBack.png';
+import famousBack from './assets/24_famousBack.png';
 import ImageInserter from './ImagesInserter';
-import backImg from './32-back.png';
+import backImg from './assets/32-back.png';
 import './Styles.css';
 import HomeBtn from './HomeBtn';
 
-function FamousComp ({backBtnLogic, homeBtnLogic, typeOfParticularInfo}){
+function FamousComp ({backBtnLogic, homeBtnLogic}){
   
   const [infoToShow, setInfoToShow]=useState('raspotin');
 

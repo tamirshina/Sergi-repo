@@ -1,18 +1,18 @@
 import React, {useEffect} from 'react';
-import sergiPageImageEN from './06_sergiEnglish.png';
-import sergiImageHE from './04_sergiImageHe.png';
-import ellaPageImageEN from './17_Elizabeth-ENG.png';
-import ellaImageHe from './17_Elizabeth-HEB.png'
-import knownPageImageEN from './06_sergiEnglish.png';
-import knownImageHe from './04_sergiImageHe.png';
-import waterPageImageEN from './37-Water pitsENG.png';
-import waterImageHe from './19-Water pitsHEB.png';
-import ogPageImageEN from './18_og finger_ENG.png';
-import ogImageHe from './18_og finger_HEB.png';
+import sergiPageImageEN from './assets/06_sergiEnglish.png';
+import sergiImageHE from './assets/04_sergiImageHe.png';
+import ellaPageImageEN from './assets/17_Elizabeth-ENG.png';
+import ellaImageHe from './assets/17_Elizabeth-HEB.png'
+import knownPageImageEN from './assets/06_sergiEnglish.png';
+import knownImageHe from './assets/04_sergiImageHe.png';
+import waterPageImageEN from './assets/37-Water pitsENG.png';
+import waterImageHe from './assets/19-Water pitsHEB.png';
+import ogPageImageEN from './assets/18_og finger_ENG.png';
+import ogImageHe from './assets/18_og finger_HEB.png';
 import isLeftToRight from './IsLeftToRightFunc';
 import {timer, removeTimer} from './TimerHundler';
 import TextInserter from './TextInserterParticular';
-import backImg from './32-back.png';
+import backImg from './assets/32-back.png';
 import './Styles.css';
 import HomeBtn from './HomeBtn';
 

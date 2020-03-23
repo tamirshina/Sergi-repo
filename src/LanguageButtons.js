@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
 import LangContext from './SergiContext';
-import englishBtn from './33-ENG.png';
-import hebrewBtn from './34-HEB.png';
-import russianBtn from './36-RUS.png';
+import englishBtn from './assets/33-ENG.png';
+import hebrewBtn from './assets/34-HEB.png';
+import russianBtn from './assets/36-RUS.png';
 import './Styles.css';
 
 

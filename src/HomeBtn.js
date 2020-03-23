@@ -1,23 +1,29 @@
 
-import React, {useEffect} from 'react';
-import homeImg from './35-home.png';
+import React, {useEffect, useRef} from 'react';
+import homeImg from './assets/35-home.png';
 import './Styles.css';
 
 
 function HomeBtn ({homeBtnLogic}) {
 
+    const homeButton = useRef(null);
+
 
     useEffect(
         () => {
-            if(document.getElementById('homeBtn')){
-                setTimeout(function(){ document.getElementById('homeBtn').style.visibility = 'visible' }, 3000);
+            try {
+                if(homeButton.current){
+                    setTimeout(function(){ homeButton.current.style.visibility = 'visible' }, 3000);
+                }
+            } catch (error) {
+                console.log(error)
             }
         // eslint-disable-next-line react-hooks/exhaustive-deps
         }, []);
 
     return (
 
-        <img src={homeImg} alt='homeBtn' id='homeBtn' onClick={homeBtnLogic} className={'homeBtn'} />
+        <img ref={homeButton} src={homeImg} alt='homeBtn' id='homeBtn' onClick={homeBtnLogic} className={'homeBtn'} />
     
     );
   }

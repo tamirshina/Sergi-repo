@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import scrollBtn from './02_Continue-text-button-small.png';
+import scrollBtn from './assets/02_Continue-text-button-small.png';
 import FrontTitleft from './FrontTitleLeft';
 import isLeftToRight from './IsLeftToRightFunc';
 import LangContext from './SergiContext';
@@ -7,8 +7,8 @@ import russianText from './russianText';
 import englishText from './englishText';
 import hebrewText from './hebrewText';
 import HandArrowFront from './HandArrowFront';
-import upperTextArrow from './11_textArrowUP.png';
-import hebrewHeader from './23_title_HEB.png';
+import upperTextArrow from './assets/11_textArrowUP.png';
+import hebrewHeader from './assets/23_title_HEB.png';
 import './Styles.css';
 
 function TextInserter (){

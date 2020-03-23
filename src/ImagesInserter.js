@@ -1,11 +1,11 @@
 import React from 'react';
-import rapinImg from './29_rapin.png';
-import arsenyImg from './31_arseny.png';
-import sailorsImg from './30_warship.png';
-import pandovImg from './28_pandov.png';
-import bailyImg from './27_baily.png';
-import koslevImg from './26_koslev.png';
-import raspotinImg from './25_raspotin.png';
+import rapinImg from './assets/29_rapin.png';
+import arsenyImg from './assets/31_arseny.png';
+import sailorsImg from './assets/30_warship.png';
+import pandovImg from './assets/28_pandov.png';
+import bailyImg from './assets/27_baily.png';
+import koslevImg from './assets/26_koslev.png';
+import raspotinImg from './assets/25_raspotin.png';
 import './famousCss.css';
 
 

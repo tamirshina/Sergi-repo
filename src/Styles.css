@@ -136,12 +136,15 @@ body, html {
     position: fixed;
     bottom: 11px;
     right: 270px;
+    z-index: 10;
 }
 .homeBtn{
     position: fixed;
     bottom: 15px;
     right: 200px;
-    visibility: hidden;
+    z-index: 10;
+    visibility: hidden; 
+
 }
 .arrowHolder{
     position: fixed;

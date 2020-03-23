@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import headerUnderline from './14_Headerunderline.png';
+import headerUnderline from './assets/14_Headerunderline.png';
 import LangContext from './SergiContext';
 import './Styles.css';
 

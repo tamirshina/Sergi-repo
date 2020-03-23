@@ -1,5 +1,5 @@
 import React from 'react';
-import headerUnderline from './14_Headerunderline.png';
+import headerUnderline from './assets/14_Headerunderline.png';
 import './Styles.css';
 import './famousCss.css';
 

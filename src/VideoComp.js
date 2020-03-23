@@ -1,8 +1,8 @@
 import React from 'react';
-import videoZoomInEN from "./15_transion_ENG.mp4";
-import videoZoomInHE from "./16_transion_HEB.mp4";
-import videoPoster from "./01_background.png";
-import leftVideoPoster from "./07_backgroundENG.png";
+import videoZoomInEN from "./assets/15_transion_ENG.mp4";
+import videoZoomInHE from "./assets/16_transion_HEB.mp4";
+import videoPoster from "./assets/01_background.png";
+import leftVideoPoster from "./assets/07_backgroundENG.png";
 import isLeftToRight from './IsLeftToRightFunc';
 import './Styles.css';
 

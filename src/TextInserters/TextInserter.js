@@ -1,15 +1,15 @@
 import React, { useContext, useRef } from 'react';
-import scrollBtn from './assets/02_Continue-text-button-small.png';
-import FrontTitleft from './FrontTitleLeft';
-import isLeftToRight from './IsLeftToRightFunc';
-import LangContext from './SergiContext';
+import scrollBtn from '../assets/02_Continue-text-button-small.png';
+import FrontTitleft from '../fragments/FrontTitleLeft';
+import isLeftToRight from '../fragments/IsLeftToRightFunc';
+import LangContext from '../SergiContext';
 import russianText from './russianText';
 import englishText from './englishText';
 import hebrewText from './hebrewText';
-import HandArrowFront from './HandArrowFront';
-import upperTextArrow from './assets/11_textArrowUP.png';
-import hebrewHeader from './assets/23_title_HEB.png';
-import './Styles.css';
+import HandArrowFront from '../fragments/HandArrowFront';
+import upperTextArrow from '../assets/11_textArrowUP.png';
+import hebrewHeader from '../assets/23_title_HEB.png';
+import '../css/Styles.css';
 
 function TextInserter (){
 
@@ -29,7 +29,6 @@ function TextInserter (){
             return JSON.parse(JSON.stringify(russianText.frontPage));
         }
     }
-    
     const  scrollAndUpdateDown=()=> {
 
         let maxTextLength =textParaEl.current.scrollHeight-textParaEl.current.clientHeight;

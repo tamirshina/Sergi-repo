@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {timer, removeTimer} from './TimerHundler';
-import TextInserter from './FamousTextInserter';
-import famousBack from './assets/24_famousBack.png';
-import ImageInserter from './ImagesInserter';
-import backImg from './assets/32-back.png';
-import './Styles.css';
-import HomeBtn from './HomeBtn';
+import {timer, removeTimer} from '../TimerHundler';
+import TextInserter from '../TextInserters/FamousTextInserter';
+import famousBack from '../assets/24_famousBack.png';
+import ImageInserter from '../TextInserters/ImagesInserter';
+import backImg from '../assets/32-back.png';
+import '../css/Styles.css';
 
 function FamousComp ({backBtnLogic, homeBtnLogic}){
   
@@ -29,7 +28,6 @@ function FamousComp ({backBtnLogic, homeBtnLogic}){
           <>
             <img src={famousBack} alt='backgroundImage' className='particularBackGround'></img>
             <img src={backImg} alt='backBtn' onClick={backBtnLogic} id='backBtn' className='backBtn'/>
-            <HomeBtn homeBtnLogic={homeBtnLogic} />
             <ImageInserter changeType={changeText} />
             <TextInserter typeOfInfo={infoToShow} homeBtnLogic={homeBtnLogic}/>
           </>

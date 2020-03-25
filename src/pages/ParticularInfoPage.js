@@ -1,7 +1,7 @@
 import React from 'react';
 import NonFamous from './NonFamous';
 import FamousComp from './FamousComp';
-import './Styles.css';
+import '../css/Styles.css';
 
 function ParticularInfoPage ({backBtnLogic, homeBtnLogic, typeOfParticularInfo}){
   

@@ -1,14 +1,14 @@
 
 import React from 'react';
 import isLeftToRight from './IsLeftToRightFunc';
-import handArrowEn from './assets/08_HendarrowENG.png';
-import handArrowHE from './assets/12_handarrowHE.png';
-import seeMoreEN from './assets/09_Touchtoseemore.png';
-import seeMoreHE from './assets/13_extraInfoHe.png';
-import './Styles.css';
+import handArrowEn from '../assets/08_HendarrowENG.png';
+import handArrowHE from '../assets/12_handarrowHE.png';
+import seeMoreEN from '../assets/09_Touchtoseemore.png';
+import seeMoreHE from '../assets/13_extraInfoHe.png';
+import '../css/Styles.css';
 
 
-function HandArrowFront ({homeBtnLogic}) {
+function HandArrowFront () {
 
     return (
 

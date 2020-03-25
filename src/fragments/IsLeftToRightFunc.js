@@ -1,6 +1,6 @@
 
 import {useContext} from 'react';
-import LangContext from './SergiContext';
+import LangContext from '../SergiContext';
 
 
 function IsLeftToRight () {

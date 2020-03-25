@@ -1,15 +1,15 @@
 import React, { useContext, useRef } from 'react';
-import scrollBtn from './assets/02_Continue-text-button-small.png';
-import isLeftToRight from './IsLeftToRightFunc';
-import LangContext from './SergiContext';
+import scrollBtn from '../assets/02_Continue-text-button-small.png';
+import isLeftToRight from '../fragments/IsLeftToRightFunc';
+import LangContext from '../SergiContext';
 import russianText from './russianText';
 import englishText from './englishText';
 import hebrewText from './hebrewText';
-import {timer, removeTimer} from './TimerHundler';
-import upperTextArrow from './assets/11_textArrowUP.png';
-import LeftFamousTitle from './LeftFamousTitle';
-import RightFamousTitle from './RightFamousTitle';
-import './famousCss.css';
+import {timer, removeTimer} from '../TimerHundler';
+import upperTextArrow from '../assets/11_textArrowUP.png';
+import LeftFamousTitle from '../fragments/LeftFamousTitle';
+import RightFamousTitle from '../fragments/RightFamousTitle';
+import '../css/famousCss.css';
 
 function FamousTextInserter ({typeOfInfo, homeBtnLogic}){
 

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import VideoComp from './VideoComp';
-import InfoPage from './InfoPage';
-import TextInserter from './TextInserter';
-import ParticularInfo from './ParticularInfoPage';
-import LanguagesButtons from './LanguageButtons';
+import VideoComp from './pages/VideoComp';
+import InfoPage from './pages/InfoPage';
+import TextInserter from './TextInserters/TextInserter';
+import ParticularInfo from './pages/ParticularInfoPage';
+import LanguagesButtons from './fragments/LanguageButtons';
+import HomeBtn from './fragments/HomeBtn';
 
 function App() {
 
@@ -59,7 +60,7 @@ const homeBtn =()=> {
 <>
 
 {isShowButtons?<LanguagesButtons />:null}
-{isFrontPage?<VideoComp playVideoLogic={playVideo} className="App"></VideoComp>:null}
+{isFrontPage?<VideoComp playVideoLogic={playVideo} className="App"></VideoComp>:<HomeBtn homeBtnLogic={homeBtn} />}
 {isInfoRouting?<InfoPage moveToParticularInfo={moveToParticularInfo} homeBtnLogic={homeBtn} />:null}
 {isTextInsert?<TextInserter />:null}
 {isParticularInfoPage?<ParticularInfo backBtnLogic={backToInfoRouting} homeBtnLogic={homeBtn} typeOfParticularInfo={typeOfParticularInfo} />:null}

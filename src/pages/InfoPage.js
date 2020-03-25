@@ -1,22 +1,17 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, {useEffect, useContext} from 'react';
-import InfoRoutingImage from './assets/03_screen2background.png';
-import {timer, removeTimer} from './TimerHundler';
-import LanguagesButtons from './LanguageButtons';
-import downHand from './assets/20_downHand.png';
-import leftHand from './assets/22_leftHand.png';
-import rightHand from './assets/21_rightHand.png';
-import LangContext from './SergiContext';
-import russianText from './russianText';
-import englishText from './englishText';
-import hebrewText from './hebrewText';
-import HomeBtn from './HomeBtn';
-import isLeftToRight from './IsLeftToRightFunc';
-import './Styles.css';
-
-
-
-
+import InfoRoutingImage from '../assets/03_screen2background.png';
+import {timer, removeTimer} from '../TimerHundler';
+import LanguagesButtons from '../fragments/LanguageButtons';
+import downHand from '../assets/20_downHand.png';
+import leftHand from '../assets/22_leftHand.png';
+import rightHand from '../assets/21_rightHand.png';
+import LangContext from '../SergiContext';
+import russianText from '../TextInserters/russianText';
+import englishText from '../TextInserters/englishText';
+import hebrewText from '../TextInserters/hebrewText';
+import isLeftToRight from '../fragments/IsLeftToRightFunc';
+import '../css/Styles.css';
 
 function InfoPage({moveToParticularInfo, homeBtnLogic}) {
 
@@ -50,7 +45,7 @@ function InfoPage({moveToParticularInfo, homeBtnLogic}) {
     <div> 
         <LanguagesButtons />
         <img src={InfoRoutingImage} className='fullBackground'></img>
-        <HomeBtn homeBtnLogic={homeBtnLogic} />
+        
             <div id='sergi' onClick={moveToParticularInfo} className={isLeftToRight()?'sergiTitle addTitleFont':'sergiTitle addTitleFont addSomeRight'}>
             <h1>{whichFileToUse().sergi}</h1>
             <img src={rightHand} alt='hand' />

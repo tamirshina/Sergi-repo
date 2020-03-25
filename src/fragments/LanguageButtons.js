@@ -1,9 +1,9 @@
 import React, {useContext} from 'react';
-import LangContext from './SergiContext';
-import englishBtn from './assets/33-ENG.png';
-import hebrewBtn from './assets/34-HEB.png';
-import russianBtn from './assets/36-RUS.png';
-import './Styles.css';
+import LangContext from '../SergiContext';
+import englishBtn from '../assets/33-ENG.png';
+import hebrewBtn from '../assets/34-HEB.png';
+import russianBtn from '../assets/36-RUS.png';
+import '../css/Styles.css';
 
 
 function LanguageButtons () {

@@ -1,6 +1,6 @@
 import React from 'react';
-import headerUnderline from './assets/14_Headerunderline.png';
-import './Styles.css';
+import headerUnderline from '../assets/14_Headerunderline.png';
+import '../css/Styles.css';
 
 
 function RightToLeftTitle ({titleToInsert}){

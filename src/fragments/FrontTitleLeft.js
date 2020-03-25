@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import headerUnderline from './assets/14_Headerunderline.png';
-import LangContext from './SergiContext';
-import './Styles.css';
+import headerUnderline from '../assets/14_Headerunderline.png';
+import LangContext from '../SergiContext';
+import '../css/Styles.css';
 
 
 function FrontTitleft (){

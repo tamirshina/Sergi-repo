@@ -143,8 +143,6 @@ body, html {
     bottom: 15px;
     right: 200px;
     z-index: 10;
-    /* visibility: hidden; */
-
 }
 .arrowHolder{
     position: fixed;

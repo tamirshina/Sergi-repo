@@ -42,10 +42,10 @@ body, html {
     line-height: 1.6;
     height: 325px;
     overflow: hidden;
-    font-family: fantasy;
+    font-family: Papyrus;
 }
 .lefToRightTexstCss{
-    font-family: fantasy;
+    font-family: Papyrus;
     text-align: left;
     line-height: 1.6;
     overflow: hidden;
@@ -227,7 +227,7 @@ font-family: titleFont;
     top: 14%;
 }
 .infoEnText{
-    font-family: fantasy;
+    font-family: Papyrus;
     position: fixed;
     left: 8%;
     top: 33%;

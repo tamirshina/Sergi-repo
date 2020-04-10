@@ -44,7 +44,7 @@ body, html {
     line-height: 1.6;
     height: 670px;
     overflow: scroll;
-    font-family: fantasy;
+    font-family: Papyrus;
 }
 .textCss{
     text-align: right;
@@ -53,10 +53,10 @@ body, html {
     top: 3%;
     height: 670px;
     overflow: scroll;
-    font-family: fantasy;
+    font-family: Papyrus;
 }
 .lefToRightTexstCss{
-    font-family: fantasy;
+    font-family: Papyrus;
     font-size: 21px;
     text-align: left;
     line-height: 1.6;
@@ -229,7 +229,7 @@ font-family: titleFont;
     top: 18%;
 }
 .infoEnText{
-    font-family: fantasy;
+    font-family: Papyrus;
     position: fixed;
     left: 8%;
     top: 28%;

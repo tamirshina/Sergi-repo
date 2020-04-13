@@ -4,7 +4,6 @@ import LangContext from '../SergiContext';
 import russianText from './russianText';
 import englishText from './englishText';
 import hebrewText from './HebrewText';
-import { timer, removeTimer } from '../TimerHundler';
 import LeftFamousTitle from '../fragments/LeftFamousTitle';
 import RightFamousTitle from '../fragments/RightFamousTitle';
 import '../css/famousCss.css';
@@ -16,11 +15,6 @@ function FamousTextInserter({ typeOfInfo, homeBtnLogic }) {
     const textParaEl = useRef(null);
 
     function createMarkup(str) { return { __html: str } };
-
-    function resetTimer() {
-        removeTimer();
-        timer(homeBtnLogic);
-    }
 
     function whichFileToUse() {
         if (lang === "hebrew") {
@@ -48,14 +42,14 @@ function FamousTextInserter({ typeOfInfo, homeBtnLogic }) {
 
     return (
 
-        <div className='infoTextBoxLeftToRight'>
+        <div className='famous-all-text-container'>
             {isLeftToRight() ?
                 <LeftFamousTitle titleToInsert={titleToInsert} />
                 :
                 <RightFamousTitle titleToInsert={titleToInsert} />}
             <p ref={textParaEl} className={isLeftToRight() ? 'infoEnText famousAdjustText' : 'famousHeText'} id="particularTextBox" dangerouslySetInnerHTML={createMarkup(infoToInsert())}>
             </p>
-            {typeOfInfo === "raspotin" ? <ScrollingBtn forwardRef={textParaEl} /> : null}
+            {typeOfInfo === "raspotin" ? <ScrollingBtn homeBtnLogic={homeBtnLogic} type={'famous'} forwardRef={textParaEl} /> : null}
         </div>
     );
 }

@@ -18,10 +18,16 @@ function App() {
   const playVideo = () => {
 
     const videoElem = document.getElementById('zoomInVideo');
+    const textParaEl = document.getElementById('frontBox');
     if (videoElem) {
       videoElem.play();
       videoElem.onplay = (event) => {
-        setTimeout(function () { setIsTextInsert(false); }, 2000);
+        if (textParaEl) {
+          textParaEl.classList.add('fade')
+        }
+        setTimeout(function () {
+          setIsTextInsert(false);
+        }, 2000);
         setTimeout(function () { setIsInfoRouting(true); }, 3500);
         setIsShowButtons(false);
 

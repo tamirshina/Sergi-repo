@@ -21,6 +21,7 @@ body, html {
     right: 6%;
     width: 34%;
     display: grid;
+    text-align: right;
 }
 .textBoxCssFront{
     position: fixed;
@@ -53,8 +54,6 @@ body, html {
     font-size: 21px;
     direction: rtl;
     line-height: 1.6;
-    position: relative;
-    top: 3%;
     height: 670px;
     overflow: scroll;
     font-family: Papyrus;
@@ -221,35 +220,23 @@ font-family: titleFont;
     right: 5%;
 }
 .heInfoPageTitle{
-    margin-left: 27px;
     margin-bottom: 0%;
 }
 .heInfoPageUnderline{
 
-    float: right;
 }
-.enInfoTitle{
+/* .enInfoTitle{
     position: fixed;
     left: 9%;
     top: 18%;
-}
+} */
 .infoEnText{
     font-family: Papyrus;
     white-space: pre-line;
     font-size: 21px;
-    position: fixed;
-    left: 8%;
-    top: 28%;
-    width: 31%;
     line-height: 1.6;
-    height: 52%;
+    height: 74%;
     overflow: scroll;
-}
-.infoTextBoxLeftToRight{
-    position: fixed;
-    top: 16%;
-    width: 33%;
-    height: 325px;
 }
 .buttomInfoScroll{
     position: fixed;
@@ -284,16 +271,79 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(82, 168, 236
     right: 6%;
 }
 .titleBoxHeb{
-    display: grid;
-    position: relative;
-    left: 55%;
+
 }
 .addMargin{
     margin-right: 15px;
 }
-.scroll-button-container{
+.ras-scroll-button-container{
     position: fixed;
     width: 200px;
     bottom: 30%;
     left: 14%;
+}
+.scroll-button-container{
+    position: fixed;
+    width: 200px;
+    bottom: 10%;
+    left: 22%;
+}
+#frontBox{
+opacity: 1;
+transition: opacity 3s;
+}
+#frontBox.fade{
+    opacity: 0;
+}
+.en-general-container{
+    position: fixed;
+    top: 10%;
+    height: 850px;
+    width: 35%;
+    left: 6%;
+}
+/* #box-water{
+    position: fixed;
+    top: 10%;
+    height: 850px;
+    width: 35%;
+    left: 6%;
+} */
+#box-ella-true{
+    position: fixed;
+    top: 16%;
+    /* height: 650px; */
+    width: 31%;
+    left: 9%;
+}
+#box-sergi-true{
+    position: fixed;
+    top: 16%;
+    /* height: 650px; */
+    width: 31%;
+    left: 9%;
+}
+#box-ella-false{
+    position: fixed;
+    top: 15%;
+    right: 6%;
+    /* height: 650px; */
+    width: 31%;
+}
+#box-sergi-false{
+    position: fixed;
+    top: 15%;
+    right: 6%;
+    /* height: 650px; */
+    width: 31%;
+}
+.heb-scroll-button-container{
+    position: relative;
+    right: 40%;
+}
+.heb-front-scroll-button-container{
+
+    position: fixed;
+    left: 82%;
+    bottom: 11%;
 }

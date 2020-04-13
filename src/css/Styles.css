@@ -40,14 +40,18 @@ body, html {
     top: 59px;
 }
 .textHeFront{
-    text-align: right;
+    white-space: pre-line;
+    font-size: 21px;
+    direction: rtl;
     line-height: 1.6;
     height: 670px;
     overflow: scroll;
     font-family: Papyrus;
 }
 .textCss{
-    text-align: right;
+    white-space: pre-line;
+    font-size: 21px;
+    direction: rtl;
     line-height: 1.6;
     position: relative;
     top: 3%;
@@ -57,6 +61,7 @@ body, html {
 }
 .lefToRightTexstCss{
     font-family: Papyrus;
+    white-space: pre-line;
     font-size: 21px;
     text-align: left;
     line-height: 1.6;
@@ -230,6 +235,8 @@ font-family: titleFont;
 }
 .infoEnText{
     font-family: Papyrus;
+    white-space: pre-line;
+    font-size: 21px;
     position: fixed;
     left: 8%;
     top: 28%;
@@ -239,7 +246,6 @@ font-family: titleFont;
     overflow: scroll;
 }
 .infoTextBoxLeftToRight{
-
     position: fixed;
     top: 16%;
     width: 33%;
@@ -284,4 +290,10 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(82, 168, 236
 }
 .addMargin{
     margin-right: 15px;
+}
+.scroll-button-container{
+    position: fixed;
+    width: 200px;
+    bottom: 30%;
+    left: 14%;
 }

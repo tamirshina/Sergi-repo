@@ -75,11 +75,12 @@
 .famousHeText{
     width: 80%;
     left: 8%;
+    font-size: 21px;
     text-align: right;
     line-height: 1.6;
     position: relative;
     top: 36%;
-    height: 670px;
+    height: 390px;
     overflow: hidden;
     font-family: Papyrus;
 }
@@ -93,4 +94,11 @@
 .famousHeUnderline{
     position: relative;
     right: -21%;
+}
+.famous-title-he{
+    position: fixed;
+    width: 500px;
+    left: 4%;
+    top: 16%;
+    text-align: center;
 }

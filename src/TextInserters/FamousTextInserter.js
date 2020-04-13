@@ -1,91 +1,63 @@
 import React, { useContext, useRef } from 'react';
-import scrollBtn from '../assets/02_Continue-text-button-small.png';
 import isLeftToRight from '../fragments/IsLeftToRightFunc';
 import LangContext from '../SergiContext';
 import russianText from './russianText';
 import englishText from './englishText';
-import hebrewText from './hebrewText';
-import {timer, removeTimer} from '../TimerHundler';
-import upperTextArrow from '../assets/11_textArrowUP.png';
+import hebrewText from './HebrewText';
+import { timer, removeTimer } from '../TimerHundler';
 import LeftFamousTitle from '../fragments/LeftFamousTitle';
 import RightFamousTitle from '../fragments/RightFamousTitle';
 import '../css/famousCss.css';
+import ScrollingBtn from '../fragments/ScrollingBtn';
 
-function FamousTextInserter ({typeOfInfo, homeBtnLogic}){
+function FamousTextInserter({ typeOfInfo, homeBtnLogic }) {
 
     const lang = useContext(LangContext).lang;
     const textParaEl = useRef(null);
-    const upperScrollEl = useRef(null);
-    const bottomScrollEl = useRef(null);
-    
+
+    function createMarkup(str) { return { __html: str } };
+
     function resetTimer() {
         removeTimer();
         timer(homeBtnLogic);
     }
 
-    function whichFileToUse (){
-        if(lang==="hebrew"){
-            return JSON.parse(JSON.stringify(hebrewText));
+    function whichFileToUse() {
+        if (lang === "hebrew") {
+            return hebrewText;
         }
-        if(lang==="english"){
+        if (lang === "english") {
             return JSON.parse(JSON.stringify(englishText));
         }
-        else{
+        else {
             return JSON.parse(JSON.stringify(russianText));
         }
     }
 
-    function infoToInsert (){
+    function infoToInsert() {
 
         return whichFileToUse().famousInfo[typeOfInfo];
-            
+
     }
 
-    function titleToInsert (){
+    function titleToInsert() {
 
         return whichFileToUse().famousTitles[typeOfInfo];
-            
-    }
-    
-    const  scrollAndUpdateDown=()=> {
 
-        let maxTextLength =textParaEl.current.scrollHeight-textParaEl.current.clientHeight;
-        textParaEl.current.scrollTop+=10;
-
-        if(textParaEl.current.scrollTop!== 0){
-            upperScrollEl.current.style.visibility = 'visible';
-        }
-        if(textParaEl.current.scrollTop===maxTextLength){
-            bottomScrollEl.current.style.visibility = 'hidden';
-        }
     }
 
-    const  scrollAndUpdateUp=()=> {
+    return (
 
-        
-        textParaEl.current.scrollTop-=10;
-
-        if(textParaEl.current.scrollTop=== 0){
-            upperScrollEl.current.style.visibility = 'hidden';
-        }if(bottomScrollEl.current.style.visibility==='hidden'){
-            bottomScrollEl.current.style.visibility = 'visible';
-        }
-    }
- 
-  return (
-
-            <div className='infoTextBoxLeftToRight'>
-            {isLeftToRight()?
-            <LeftFamousTitle titleToInsert={titleToInsert} />
-            :
-            <RightFamousTitle titleToInsert={titleToInsert} /> }
-                <img ref={textParaEl} onClick={()=>{resetTimer(); scrollAndUpdateUp()}} src={upperTextArrow} alt="scrollBtn" className={isLeftToRight()?'topInfoScrollEn':'topScrollOneHE'}/>
-                <p ref={textParaEl} className={isLeftToRight()?'infoEnText famousAdjustText':'famousHeText'} id="particularTextBox"> 
-                    {infoToInsert()}
-                </p>
-                <img ref={bottomScrollEl} onClick={()=>{resetTimer(); scrollAndUpdateDown()}} src={scrollBtn} alt="scrollBtn" className={isLeftToRight()?'buttomInfoScroll':'buttomScrollOneHE'}/>
-            </div>
-        );
+        <div className='infoTextBoxLeftToRight'>
+            {isLeftToRight() ?
+                <LeftFamousTitle titleToInsert={titleToInsert} />
+                :
+                <RightFamousTitle titleToInsert={titleToInsert} />}
+            <p ref={textParaEl} className={isLeftToRight() ? 'infoEnText famousAdjustText' : 'famousHeText'} id="particularTextBox" dangerouslySetInnerHTML={createMarkup(infoToInsert())}>
+            </p>
+            {typeOfInfo === "raspotin" ? <ScrollingBtn forwardRef={textParaEl} /> : null}
+        </div>
+    );
 }
 
 export default FamousTextInserter;

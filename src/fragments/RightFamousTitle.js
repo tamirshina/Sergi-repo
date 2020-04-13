@@ -4,15 +4,15 @@ import '../css/Styles.css';
 import '../css/famousCss.css';
 
 
-function RightFamousTitle ({titleToInsert}){
+function RightFamousTitle({ titleToInsert }) {
 
     return (
 
-            <div className='enInfoTitle'>
-                <h1 className='hebrewFamousTitle'>{titleToInsert()}</h1>
-                <img alt='underline' src={headerUnderline} className='famousHeUnderline'/>
-            </div>
-            );
+        <div className='famous-title-he'>
+            <h1 className='hebrewFamousTitle'>{titleToInsert()}</h1>
+            <img alt='underline' src={headerUnderline} className='famousHeUnderline' />
+        </div>
+    );
 
 }
 export default RightFamousTitle;

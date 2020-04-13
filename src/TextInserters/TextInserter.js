@@ -5,10 +5,10 @@ import isLeftToRight from '../fragments/IsLeftToRightFunc';
 import LangContext from '../SergiContext';
 import russianText from './russianText';
 import englishText from './englishText';
-import hebrewText from './hebrewText';
 import HandArrowFront from '../fragments/HandArrowFront';
 import upperTextArrow from '../assets/11_textArrowUP.png';
 import hebrewHeader from '../assets/23_title_HEB.png';
+import hebrewText from './HebrewText';
 import '../css/Styles.css';
 
 function TextInserter() {
@@ -21,8 +21,9 @@ function TextInserter() {
     function createMarkup(str) { return { __html: str } };
 
     function whichFileToUse() {
+
         if (lang === "hebrew") {
-            return JSON.parse(JSON.stringify(hebrewText.frontPage));
+            return hebrewText.frontPage;
         }
         if (lang === "english") {
             return JSON.parse(JSON.stringify(englishText.frontPage));
@@ -64,6 +65,7 @@ function TextInserter() {
                     <FrontTitleft /> :
                     <img alt='hebHeader' src={hebrewHeader} className='frontPageHeTitle' />}
                 <img ref={upperScrollEl} onClick={scrollAndUpdateUp} id="scrollBtnPng" src={upperTextArrow} alt="scrollBtn" className={isLeftToRight() ? 'topScrollOneEN' : 'topScrollOneHE'} />
+                {/* nitice what happens here! */}
                 <p ref={textParaEl} className={isLeftToRight() ? 'lefToRightTexstCss' : 'textHeFront'} id="openingTextBox" dangerouslySetInnerHTML={createMarkup(whichFileToUse())}>
 
                 </p>

@@ -9,7 +9,7 @@ function RightFamousTitle({ titleToInsert }) {
     return (
 
         <div className='famous-title-he'>
-            <h1>{titleToInsert()}</h1>
+            <h1 className={"titleFont"}>{titleToInsert()}</h1>
             <img alt='underline' src={headerUnderline} className={"famous-heb-undrline"} />
         </div>
     );

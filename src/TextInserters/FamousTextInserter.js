@@ -42,7 +42,7 @@ function FamousTextInserter({ typeOfInfo, homeBtnLogic }) {
 
     return (
 
-        <div className='famous-all-text-container'>
+        <div className={typeOfInfo === "raspotin" ? 'famous-all-text-container' : 'not-ras-all-text-container'}>
             {isLeftToRight() ?
                 <LeftFamousTitle titleToInsert={titleToInsert} />
                 :

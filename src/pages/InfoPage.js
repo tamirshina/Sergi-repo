@@ -44,7 +44,7 @@ function InfoPage({ moveToParticularInfo, homeBtnLogic }) {
         <div>
             <img src={InfoRoutingImage} className='fullBackground'></img>
 
-            <div id='sergi' onClick={moveToParticularInfo} className={isLeftToRight() ? 'sergiTitle addTitleFont' : 'sergiTitle addTitleFont addSomeRight'}>
+            <div id='sergi' onClick={moveToParticularInfo} className={isLeftToRight() ? 'sergiTitle addTitleFont' : 'sergiTitle addTitleFont'}>
                 <h1>{whichFileToUse().sergi}</h1>
                 <img src={rightHand} alt='hand' />
             </div>

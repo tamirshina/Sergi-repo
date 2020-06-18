@@ -6,7 +6,7 @@ import downHand from '../assets/20_downHand.png';
 import leftHand from '../assets/22_leftHand.png';
 import rightHand from '../assets/21_rightHand.png';
 import LangContext from '../SergiContext';
-import russianText from '../TextInserters/russianText';
+import russianText from '../TextInserters/RussianText';
 import englishText from '../TextInserters/englishText';
 import hebrewText from '../TextInserters/HebrewText';
 import isLeftToRight from '../fragments/IsLeftToRightFunc';
@@ -35,7 +35,7 @@ function InfoPage({ moveToParticularInfo, homeBtnLogic }) {
             return JSON.parse(JSON.stringify(englishText)).titles;
         }
         else {
-            return JSON.parse(JSON.stringify(russianText)).titles;
+            return russianText.titles;
         }
     }
 

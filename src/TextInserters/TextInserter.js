@@ -2,7 +2,7 @@ import React, { useContext, useRef } from 'react';
 import FrontTitleft from '../fragments/FrontTitleLeft';
 import isLeftToRight from '../fragments/IsLeftToRightFunc';
 import LangContext from '../SergiContext';
-import russianText from './russianText';
+import russianText from './RussianText';
 import englishText from './englishText';
 import HandArrowFront from '../fragments/HandArrowFront';
 import hebrewHeader from '../assets/23_title_HEB.png';
@@ -26,7 +26,7 @@ function TextInserter() {
             return JSON.parse(JSON.stringify(englishText.frontPage));
         }
         else {
-            return JSON.parse(JSON.stringify(russianText.frontPage));
+            return russianText.frontPage;
         }
     }
 

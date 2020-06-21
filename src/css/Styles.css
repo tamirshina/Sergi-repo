@@ -31,8 +31,8 @@ body, html {
 }
 .leftToRightTextBox{
     position: fixed;
-    top: 15px;
-    width: 400px;
+    top: 40px;
+    left: 25px;
     height: 325px;
 }
 .leftTitleFront{
@@ -65,11 +65,11 @@ body, html {
     text-align: left;
     line-height: 1.6;
     overflow: scroll;
-    left: 6%;
-    top: 17%;
-    position: fixed;
-    width: 34%;
-    height: 63%;
+    left: 17%;
+    top: 16%;
+    position: relative;
+    width: 600px;
+    height: 700px;
 }
 .buttomScrollOneHE{
     position: relative;
@@ -99,6 +99,7 @@ body, html {
     position: fixed;
     top: 40%;
     right: 10%;
+    width: 200px;
     font-size: 14px;
     display: inline;
     text-align: center;
@@ -229,6 +230,7 @@ font-size: 23px;
 }
 .frontPageEnTitle{
     margin-bottom: 0%;
+    font-size: 29px;
 }
 .frontPageHeTitle{
     height: 100px;
@@ -282,7 +284,7 @@ box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 0px 8px rgba(82, 168, 236
 .ras-scroll-button-container{
     position: fixed;
     width: 200px;
-    bottom: 30%;
+    bottom: 31%;
     left: 14%;
 }
 .scroll-button-container{
@@ -316,6 +318,10 @@ transition: opacity 3s;
     top: 20%;
     width: 31%;
     left: 9%;
+}
+#box-sergi-true frontPageUnderline{
+    width: 500px;
+    height: 10px;
 }
 #box-ella-false{
     position: fixed;
@@ -351,4 +357,11 @@ transition: opacity 3s;
     position: fixed;
     left: 82%;
     bottom: 11%;
+}
+#box-og-true{
+    width: 28%;
+}
+
+#box-og-true p{
+    margin-top: 25px;
 }

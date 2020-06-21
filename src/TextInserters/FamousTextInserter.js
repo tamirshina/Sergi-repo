@@ -39,7 +39,6 @@ function FamousTextInserter({ typeOfInfo, homeBtnLogic }) {
         return whichFileToUse().famousTitles[typeOfInfo];
 
     }
-
     return (
 
         <div className={typeOfInfo === "raspotin" ? 'famous-all-text-container' : 'not-ras-all-text-container'}>

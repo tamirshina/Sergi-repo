@@ -11,7 +11,7 @@ function FrontTitleft() {
     return (
 
         <div className='leftTitleFront'>
-            <h1 className='titleFont frontPageEnTitle'>{lang === "english" ? 'Sergi Courtyard' : 'реформирует'}</h1>
+            <h1 className='titleFont frontPageEnTitle'>{lang === "english" ? 'Sergi Courtyard' : 'Сергиевское подворье'}</h1>
             <img alt='underline' src={headerUnderline} />
         </div>
     );

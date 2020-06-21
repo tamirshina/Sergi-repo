@@ -71,14 +71,15 @@
     font-size: 16px;
     text-align: right;
     line-height: 1.6;
-    height: 390px;
-    overflow: hidden;
+    height: 427px;
+    overflow: scroll;
     font-family: Papyrus;
 }
 .famousAdjustText{
     position: relative;
     left: 4%;
     width: 75%;
+    height: 427px;
 }
 .famousUnderline{
     width: 330px;

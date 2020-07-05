@@ -3,7 +3,7 @@ import FrontTitleft from '../fragments/FrontTitleLeft';
 import isLeftToRight from '../fragments/IsLeftToRightFunc';
 import LangContext from '../SergiContext';
 import russianText from './RussianText';
-import englishText from './englishText';
+import englishText from './EnglishText';
 import HandArrowFront from '../fragments/HandArrowFront';
 import hebrewHeader from '../assets/23_title_HEB.png';
 import hebrewText from './HebrewText';
@@ -23,7 +23,7 @@ function TextInserter() {
             return hebrewText.frontPage;
         }
         if (lang === "english") {
-            return JSON.parse(JSON.stringify(englishText.frontPage));
+            return englishText.frontPage;
         }
         else {
             return russianText.frontPage;

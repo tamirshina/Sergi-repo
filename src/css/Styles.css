@@ -108,23 +108,20 @@ body, html {
     position: fixed;
     top: 40%;
     left: 9%;
-    width: 200px;
     font-size: 14px;
     display: inline;
-    text-align: center;
 }
 .knownTitle{
     position: fixed;
-    top: 28%;
+    top: 25%;
     left: 24%;
     font-size: 14px;
     display: inline;
-    text-align: center;
 }
 .ogTitle{
     position: fixed;
-    top: 20%;
-    right: 27%;
+    top: 29%;
+    right: 45%;
     font-size: 14px;
 }
 .ogHeadline{
@@ -364,4 +361,8 @@ transition: opacity 3s;
 
 #box-og-true p{
     margin-top: 25px;
+}
+.info-page-titles{
+    width: 200px;
+    text-align: center;
 }

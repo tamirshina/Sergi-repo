@@ -2,7 +2,7 @@ import React, { useContext, useRef } from 'react';
 import isLeftToRight from '../fragments/IsLeftToRightFunc';
 import LangContext from '../SergiContext';
 import russianText from './RussianText';
-import englishText from './englishText';
+import englishText from './EnglishText';
 import hebrewText from './HebrewText';
 import LeftFamousTitle from '../fragments/LeftFamousTitle';
 import RightFamousTitle from '../fragments/RightFamousTitle';
@@ -21,7 +21,7 @@ function FamousTextInserter({ typeOfInfo, homeBtnLogic }) {
             return hebrewText;
         }
         if (lang === "english") {
-            return JSON.parse(JSON.stringify(englishText));
+            return englishText;
         }
         else {
             return russianText;

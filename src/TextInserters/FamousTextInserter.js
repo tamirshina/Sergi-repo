@@ -1,5 +1,6 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useState, useEffect } from 'react';
 import isLeftToRight from '../fragments/IsLeftToRightFunc';
+import { timer, removeTimer } from "../TimerHundler";
 import LangContext from '../SergiContext';
 import russianText from './RussianText';
 import englishText from './EnglishText';
@@ -12,7 +13,31 @@ import ScrollingBtn from '../fragments/ScrollingBtn';
 function FamousTextInserter({ typeOfInfo, homeBtnLogic }) {
 
     const lang = useContext(LangContext).lang;
+    const [isScrollDebounce, setIsScrollDebounce] = useState(true);
+    const tempTimer = useRef(null);
     const textParaEl = useRef(null);
+
+    useEffect(() => {
+        return () => {
+            clearTimeout(tempTimer.current);
+        };
+        // eslint-disable-next-line
+    }, []);
+
+    function resetTimer() {
+        removeTimer();
+        timer(homeBtnLogic);
+    }
+
+    function handleScroll() {
+        if (isScrollDebounce) {
+            setIsScrollDebounce(false);
+            resetTimer();
+            tempTimer.current = setTimeout(function () {
+                setIsScrollDebounce(true);
+            }, 10000);
+        }
+    }
 
     function createMarkup(str) { return { __html: str } };
 
@@ -46,7 +71,7 @@ function FamousTextInserter({ typeOfInfo, homeBtnLogic }) {
                 <LeftFamousTitle titleToInsert={titleToInsert} />
                 :
                 <RightFamousTitle titleToInsert={titleToInsert} />}
-            <p ref={textParaEl} className={isLeftToRight() ? 'infoEnText famousAdjustText' : 'famousHeText'} id="particularTextBox" dangerouslySetInnerHTML={createMarkup(infoToInsert())}>
+            <p ref={textParaEl} className={isLeftToRight() ? 'infoEnText famousAdjustText' : 'famousHeText'} id="particularTextBox" dangerouslySetInnerHTML={createMarkup(infoToInsert())} onScroll={handleScroll}>
             </p>
             {typeOfInfo === "raspotin" ? <ScrollingBtn homeBtnLogic={homeBtnLogic} type={'famous'} forwardRef={textParaEl} /> : null}
         </div>

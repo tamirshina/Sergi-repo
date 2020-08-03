@@ -14,6 +14,7 @@ body, html {
     height: -webkit-fill-available;
     object-fit: fill;
     width: 100%;
+    margin-bottom: -4px;
 }
 .textBoxCss{
     position: fixed;
@@ -27,7 +28,7 @@ body, html {
     position: fixed;
     top: 18%;
     right: 6%;
-    width: 29%;
+    width: 30%;
 }
 .leftToRightTextBox{
     position: fixed;
@@ -42,7 +43,7 @@ body, html {
 }
 .textHeFront{
     white-space: pre-line;
-    font-size: 16px;
+    font-size: 22px;
     direction: rtl;
     line-height: 1.6;
     height: 670px;
@@ -61,7 +62,7 @@ body, html {
 .lefToRightTexstCss{
     font-family: Papyrus;
     white-space: pre-line;
-    font-size: 16px;
+    font-size: 22px;
     text-align: left;
     line-height: 1.6;
     overflow: scroll;
@@ -148,6 +149,7 @@ body, html {
     height: -webkit-fill-available;
     object-fit: fill;
     width: 100%;
+    margin-bottom: -4px;
 }
 
 .backBtn{
@@ -241,7 +243,7 @@ font-size: 23px;
 .infoEnText{
     font-family: Papyrus;
     white-space: pre-line;
-    font-size: 16px;
+    font-size: 22px;
     line-height: 1.6;
     height: 74%;
     overflow: scroll;

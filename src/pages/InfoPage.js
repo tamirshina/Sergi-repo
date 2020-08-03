@@ -20,7 +20,7 @@ function InfoPage({ moveToParticularInfo, homeBtnLogic }) {
         () => {
             timer(homeBtnLogic);
 
-            return () => { // Return callback to run on unmount.
+            return () => {
 
                 removeTimer();
             };
@@ -39,6 +39,12 @@ function InfoPage({ moveToParticularInfo, homeBtnLogic }) {
         }
     }
 
+    function addStyle() {
+        if (lang === "russian") {
+            return { top: '23%' }
+        }
+    }
+
     return (
 
         <div>
@@ -52,7 +58,7 @@ function InfoPage({ moveToParticularInfo, homeBtnLogic }) {
                 <h1>{whichFileToUse().ella}</h1>
                 <img src={leftHand} alt='hand' />
             </div>
-            <div id='known' onClick={moveToParticularInfo} className='knownTitle addTitleFont info-page-titles'>
+            <div id='known' onClick={moveToParticularInfo} className='knownTitle addTitleFont info-page-titles' style={addStyle()}>
                 <h1>{whichFileToUse().known}</h1>
                 <img src={downHand} alt='hand' />
             </div>

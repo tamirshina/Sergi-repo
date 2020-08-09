@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import VideoComp from './pages/VideoComp';
 import InfoPage from './pages/InfoPage';
 import TextInserter from './TextInserters/TextInserter';
@@ -14,6 +14,16 @@ function App() {
   const [isShowButtons, setIsShowButtons] = useState(true);
   const [typeOfParticularInfo, setTypeOfParticularInfo] = useState();
   const [isParticularInfoPage, setIsParticularInfoPage] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('contextmenu', blockContextMenu);
+
+    // eslint-disable-next-line
+  }, []);
+
+  const blockContextMenu = (evt) => {
+    evt.preventDefault();
+  };
 
   const playVideo = () => {
 

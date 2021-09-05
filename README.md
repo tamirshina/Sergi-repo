@@ -1,14 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## sleep script - %systemroot%\system32\scrnsave.scr /s
-
-## wake with mouse software - AutoKey
-## wake script - 
-Click, Right, 200, 300
-Click, Right, 500, 600
-Click, Right, 700, 200
-Click, Right, 900, 500
-
 ## Available Scripts
 
 In the project directory, you can run:

@@ -1,28 +1,33 @@
-import React from 'react';
-import NonFamous from './NonFamous';
-import FamousComp from './FamousComp';
-import '../css/Styles.css';
+import React from "react";
+import NonFamous from "./NonFamous";
+import FamousComp from "./FamousComp";
+import "../css/Styles.css";
 
-function ParticularInfoPage ({backBtnLogic, homeBtnLogic, typeOfParticularInfo}){
-  
-      function isFamous (){
+function ParticularInfoPage({
+  backBtnLogic,
+  homeBtnLogic,
+  typeOfParticularInfo,
+}) {
+  function isFamous() {
+    if (typeOfParticularInfo === "known") {
+      return true;
+    }
+    return false;
+  }
 
-        if(typeOfParticularInfo==='known'){
-
-          return true;
-        }
-        return false;
-      }
- 
   return (
-          <>
-            {isFamous()?
-            <FamousComp backBtnLogic={backBtnLogic} homeBtnLogic={homeBtnLogic} />:
-            <NonFamous backBtnLogic={backBtnLogic} homeBtnLogic={homeBtnLogic} typeOfInfo={typeOfParticularInfo} />
-            }
-          </>
-        );
-    
+    <>
+      {isFamous() ? (
+        <FamousComp backBtnLogic={backBtnLogic} homeBtnLogic={homeBtnLogic} />
+      ) : (
+        <NonFamous
+          backBtnLogic={backBtnLogic}
+          homeBtnLogic={homeBtnLogic}
+          typeOfInfo={typeOfParticularInfo}
+        />
+      )}
+    </>
+  );
 }
 
 export default ParticularInfoPage;

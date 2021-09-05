@@ -1,14 +1,13 @@
 const englishText = {
-
-    id: "englishText",
-    titles: {
-        sergi: "Prince Sergey Alexandrovich Romanov",
-        ella: "Elizabeth Princess of Hesse",
-        og: "The Finger of Og",
-        water: "The Water Pits",
-        known: "Famous Guests"
-    },
-    frontPage: `
+  id: "englishText",
+  titles: {
+    sergi: "Prince Sergey Alexandrovich Romanov",
+    ella: "Elizabeth Princess of Hesse",
+    og: "The Finger of Og",
+    water: "The Water Pits",
+    known: "Famous Guests",
+  },
+  frontPage: `
     End of the 19th century, Jerusalem is awakening from a hibernation period of 400 years and ignites the imagination of Christians worldwide. The Ottoman rule begins to open up to the West and institutes reforms concerning its stance towards Christians and Jews. Priests, historians, writers, artists and pilgrims come to visit the awakening city and share their experiences with their nationals from their respective homeland. The big empires of the time initiate financial investments, found consulates and renovate churches around Palestine. The Russian Empire is the definitive leader in this international arena; Russian representatives are efficient and highly motivated, they forge strong connections, they promote projects and erect constructions all over the Land of Israel.
 
     The Russian people, who are instilled with the feeling of the Holy Spirit, start awakening and thousands of pilgrims travel all the way from Russia to Palestine. IOPS(Imperial Orthodox Palestine Society), Russian Orthodoxy’s umbrella organization, is founded and begins its activities with zeal. A chain of care is created for every pilgrim since the first moments of their journey, from their village or city in Russia, and to the furthest churches in the Middle East. Here in Jerusalem the majority of the sojourners reside in the hospitable and welcoming hostels that were constructed in the names of the Tsarina Maria Alexandrovna and Elisheva, mother of John the Baptist (Yelizabeta in Russian).
@@ -40,9 +39,8 @@ const englishText = {
     
     During the beginning of the 20th century Sergey’s Courtyard was a vibrant and lively place, which was the epicenter of pilgrim life during their stay in Jerusalem. Until the outbreak of WWI the site hosted artist workshops, a stable, a firefighter station, a library, a garage, laundry facilities, two dining halls, a bakery, a banquet hall and more. The Courtyard provided a base for and hosted very distinguished guests, professors, soldiers, sailors, priests and ordinary pilgrims.    
 `,
-    particularInfo: {
-        ella:
-            `
+  particularInfo: {
+    ella: `
             When someone tries to imagine the ultimate princess from the legends, he is probably thinking of a figure that resembles Elizabeth Princess of Hesse, daughter to the German Ducal family of Hesse-Darmstadt on the riverbanks of the Rhine. In southern Germany, a content and bountiful region, life was progressing pleasantly without any lack of either water or food; the main pastime activities of the family were hunting and sitting by the river. Elizabeth is known by her friends and family as “Ella”.
             This dynasty’s origins go back to the Roman Empire, and Ella herself is grand-daughter of the Queen of England of that period, Queen Victoria, and daughter of Ludwig IV Duke of Hesse, as well as great-aunt to Prince Philip, Duke of Edinburgh. 
             
@@ -70,7 +68,7 @@ const englishText = {
             Three moths later, the White Army forces still partly loyal to the previous regime, reach the iron mine, find the pit and recover the bodies. They discover that the body of Elizabeth and the others were preserved in a decent condition inside the pit. Further, they discover that Elizabeth did not die directly, but had the strength to bandage the head of Prince Ioann with her wimple.
             In 1920 White Army forces transfer the remains to be buried in the Orthodox Christian cemetery in Beijing in order to save them from the Bolsheviks. During the same year, Elizabeth’s remains are moved, as she had always dreamt, to be buried in the church of Mary Magdalene on the Mount of Olives. In 1981 she is canonized as a saint by the Russian Orthodox church as a sign of honor for her good deeds. Her figure is one of the ten saints of the 20th century whose statues decorate the upper part of the front entrance of Westminster Abbey in London.
                     `,
-        sergi: `Sergey Alexandrovich Romanov, son of the Romanov dynasty, which ruled the Russian Empire for approximately 300 consecutive years, was born on May 11th 1857 in the Ekaterina palace located in the town of Pushkin, roughly 30 kilometers south of Saint-Petersburg. Sergey was the seventh son out of Tsar Alexander’s II eight children, brother to Tsar Alexander III, uncle and right-hand person to the last Tsar, Nikolai II.
+    sergi: `Sergey Alexandrovich Romanov, son of the Romanov dynasty, which ruled the Russian Empire for approximately 300 consecutive years, was born on May 11th 1857 in the Ekaterina palace located in the town of Pushkin, roughly 30 kilometers south of Saint-Petersburg. Sergey was the seventh son out of Tsar Alexander’s II eight children, brother to Tsar Alexander III, uncle and right-hand person to the last Tsar, Nikolai II.
 
         Sergey is depicted by the family’s acquaintances as quite introverted and shy as a child, reminding his mother in his personality and deeds. Much like his mother, he grew up an ardently observant Christian and his faith was the common denominator for many of the actions over the course of his life.
 
@@ -98,7 +96,7 @@ const englishText = {
         
         Just a little time after his retirement Sergey was assassinated when a molotov cocktail was thrown inside his carriage in February 1905.        
         `,
-        water: `Since Jerusalem’s early days, almost 4,000 years ago, water always constituted a principal complication. On one hand, Jerusalem’s strategic location on top of the mountain provides defence from invaders, but on the other hand, makes it difficult to provide the city with continuous supply of water.
+    water: `Since Jerusalem’s early days, almost 4,000 years ago, water always constituted a principal complication. On one hand, Jerusalem’s strategic location on top of the mountain provides defence from invaders, but on the other hand, makes it difficult to provide the city with continuous supply of water.
 
         The great importance of water in the city was apparently the reason for which, during the days of the Temple, a special water festival was prepared every year in Jerusalem during the Sukkot holiday (Feast of Tabernacles) that was called Simchat Beit Ha-Shoeva (Rejoicing of the Water-Drawing House). The festival was accompanied by various popular rituals: The people of the tribe of Levi pumped water from the Gikhon spring and brought it all the way up to the altar in the Temple, the people expressed their gratitude and praised God for all the rainfall of the passing year and prayed for another year blessed with bountiful rain. 
         Based on this festival, the sages of Israel said: “He who has not witnessed Simchat Beit Ha-Shoeva, has not witnessed rejoicing in his days at all”.
@@ -132,17 +130,17 @@ const englishText = {
 
         As previously mentioned, after a month the city of Jerusalem was drying up and by that point all the IDF was engaged in operation “Shiloach”, whose goal was digging a canal that would navigate water from a well in the city of Rechovot to Jerusalem passing solely from Hebrew settlemments. The operation was crowned with success and the city of Jerusalem was saved from drought.        
         `,
-        og: `During 1858, as the construction works commenced in the land plot that Tsar Alexander II recently purchased just outside the city walls next to Jaffa Gate (known as Moscow Square), a fascinating discovery of an enormous stone pillar is made.
+    og: `During 1858, as the construction works commenced in the land plot that Tsar Alexander II recently purchased just outside the city walls next to Jaffa Gate (known as Moscow Square), a fascinating discovery of an enormous stone pillar is made.
         
         The length of the pillar is 12 meters, its diameter 1.75 meters and its weight approximately 60 tons. The big column is made of the so-called “Jewish stone” (Hebrew: mizit yehudit, Arabic: mizzi yahudi), a specific variety of the world-renowned Jerusalem stone; a dark grey or yellow crystalline dolomite or dolomitic limestone, appreciated for its hardness which made it an excellent building material for the city of Jerusalem and its surroundings. Varieties of the Jerusalem stone have been used in numerous famous constructions in the area of Jerusalem, such as the Western Wall.
 
         Because of its size, the column is attributed to the Herodian period, which constitutes the epax of building activity in the land of Israel and Yehuda. Archaeologists estimate that the unearthed pillar was intended for the construction of the Second Temple relying on Yosef ben Matityahu’s (Flavius Josephus) testimony; he mentions huge columns “27-feet high” (aprox. 8.25 meters) being used for the construction of the Second Temple on Temple Mount. Other experts claim it to be impossible that this column was used for the construction of the Second Temple, as it is larger than 27 feet along with the fact that in the Herodian period it was customary to build using columns created of multiple sections of stone in contrast to this monolithic one.
 
         Since its discovery and because of its size, the pillar has been known as the “Finger of Og” among Jerusalem’s residents in the name of Og, king of Bashan, who is described in the Bible as a person of great size. According to a Talmudic text he was the only person to survive the Great Flood apart from Noah.
-        `
-    },
-    famousInfo: {
-        raspotin: `One of the most interesting figures of modern history. Rasputin was a mystic and thought of himself as a holy person. He was described by people as a “stranik”, a word used to describe a pilgrim or a nomad in Russian culture, a wandering person traveling in an attempt to achieve a specific goal.
+        `,
+  },
+  famousInfo: {
+    raspotin: `One of the most interesting figures of modern history. Rasputin was a mystic and thought of himself as a holy person. He was described by people as a “stranik”, a word used to describe a pilgrim or a nomad in Russian culture, a wandering person traveling in an attempt to achieve a specific goal.
 
         His personal charm bought him a name in Saint-Peterburg’s high society in the beginning of the 20th century. In 1905 Rasputin made the acquaintance of Tsar Nikolai II for the first time. Tsar Nikolai and the Tsarina Alexandra Feodorovna were desperate to find a cure for their son and heir to the throne, who was suffering from hemophilia, and they chose to take a chance with Gregory Rasputin. Rasputin served as some sort of “healer” for Alexander and thus he earned the royal couple’s fondness and estimation, which in turn granted him indescribable power and influence.
         Rasputin’s influence on the royal court had grown so strong, that under his influence senior government officials were nominated and discharged.
@@ -155,7 +153,7 @@ const englishText = {
         
         Rasputin was eventually murdered by several members of Russian nobility in 1916 in order to eliminate his influence on the royal family, even though it did not prevent the revolution that terminated the Tsarist rule in Russia.  
         `,
-        rapin: `Painter and sculptor of Ukrainian origin, one of the most popular Russian painters of his period. He became known for his realist style that greatly inspired painters during the first years of the Soviet Union and the style of socialist realism that developed in Russia at the time.
+    rapin: `Painter and sculptor of Ukrainian origin, one of the most popular Russian painters of his period. He became known for his realist style that greatly inspired painters during the first years of the Soviet Union and the style of socialist realism that developed in Russia at the time.
         
         Repin was member of the Itinerants’ Society, a group of artists that protested the academic formalities and restrictions in art. Repin has created some very inspirational pieces that represent the simple folk and the hierarchical society that ruled the world based on violence during the previous centuries.
         
@@ -163,34 +161,32 @@ const englishText = {
 
         Repin described the emotions he felt in his journey in Jerusalem in the following words: “In the entire city of Jerusalem there is something so touching that makes you weep, something like no other anywhere in the world. There are no words to express the feelings, in every place there is a spirit of eternity”.(1844 – 1930).
         `,
-        koslev: `Russian painter and illustrator. Koshelev was an expert in painting scenes depicting everyday life and religious motifs. Koshelev’s paintings commemorate a number of principal churches in Russia such as the “Cathedral of Jesus the Savior” in Moscow, one of the most noteworthy churches in Russia, and the “Cathedral of St. Isaac from Dalmatia”. As a consequence of all his work, Koleshev received the title of Professor in the Imperial Academy of Art in Saint-Peterburg. A collection of his works titled “The way of the Cross” is exhibited in the Holy Trinity Cathedral in the old city of Jerusalem.(1840 – 1918).
+    koslev: `Russian painter and illustrator. Koshelev was an expert in painting scenes depicting everyday life and religious motifs. Koshelev’s paintings commemorate a number of principal churches in Russia such as the “Cathedral of Jesus the Savior” in Moscow, one of the most noteworthy churches in Russia, and the “Cathedral of St. Isaac from Dalmatia”. As a consequence of all his work, Koleshev received the title of Professor in the Imperial Academy of Art in Saint-Peterburg. A collection of his works titled “The way of the Cross” is exhibited in the Holy Trinity Cathedral in the old city of Jerusalem.(1840 – 1918).
 
         `,
-        pandov: `Art historian with special expertise in Russian Christian icons. He taught in Novgorod and Saint-Peterburg universities and was a member of the Russian Classical Arts Academy.(1844 – 1925).
+    pandov: `Art historian with special expertise in Russian Christian icons. He taught in Novgorod and Saint-Peterburg universities and was a member of the Russian Classical Arts Academy.(1844 – 1925).
         `,
-        warship: `In 1899 the warship “Alexander II” anchored in the port of Jaffa and on it 30 officers and 600 sailors. The Society hosted the entire crew at Sergey’s Courtyard, organized visits to the Society’s schools for the sailors, took them to excursions to the holy sites in Palestine and even arranged for them to receive blessings from the people of the Ecclesiastical Mission in Jerusalem.
+    warship: `In 1899 the warship “Alexander II” anchored in the port of Jaffa and on it 30 officers and 600 sailors. The Society hosted the entire crew at Sergey’s Courtyard, organized visits to the Society’s schools for the sailors, took them to excursions to the holy sites in Palestine and even arranged for them to receive blessings from the people of the Ecclesiastical Mission in Jerusalem.
         
         The Admiral of the warship carried out a tour of the warship for the pupils of the Society’s schools. Furthermore, the crews of the ships “Zabyaka” and “Kostroma” paid Sergey’s Courtyard a visit.
         `,
-        baily: `Author, poet, theorist and literary critic known by the nome-de-plum Andrei Bely, one of the prominent figures in the symbolist movement in Russian literature. His novel “Peterburg” was commented by Vladimir Nabokov as one of the four greatest novels of the 20th century.(1880-1934).
+    baily: `Author, poet, theorist and literary critic known by the nome-de-plum Andrei Bely, one of the prominent figures in the symbolist movement in Russian literature. His novel “Peterburg” was commented by Vladimir Nabokov as one of the four greatest novels of the 20th century.(1880-1934).
         `,
-        arseny: `Arseniy Stadnitski was a priest and rector of the Theological Academy of Moscow who led a mission of professors and students to the Holy Land in 1900. Another priest known by the name Kirilovsky also joined the mission. The endeavor was crowned a success and was documented in a special text by Alyona Strelnikova. 
+    arseny: `Arseniy Stadnitski was a priest and rector of the Theological Academy of Moscow who led a mission of professors and students to the Holy Land in 1900. Another priest known by the name Kirilovsky also joined the mission. The endeavor was crowned a success and was documented in a special text by Alyona Strelnikova. 
          
          Later in his life, Stadnitski became a bishop, member of the governmental council of Tsarist Russia, Metropolite of Tashkent and Turkistan and member of Russia’s Holy Synod. 
          
          Kirilovsky was a murdered a year after he became a bishop, together with a nun and five innocent people, during the days of "red terror". After many years Kirilovsky was made a saint by the Russian Church.(1862 – 1936).
-       `
-    },
-    famousTitles: {
-        raspotin: "Gregory Yefimovich Rasputin",
-        rapin: "Ilya Yefimovich Repin",
-        koslev: "Nikolai Andreyevich Koshelev",
-        pandov: "Nikodim Pavlovich Kondakov",
-        warship: "Warship “Alexander II” Crew",
-        baily: "Boris Nikolayevich Bugaev",
-        arseny: "The Academic Mission"
-    }
-
-
-}
+       `,
+  },
+  famousTitles: {
+    raspotin: "Gregory Yefimovich Rasputin",
+    rapin: "Ilya Yefimovich Repin",
+    koslev: "Nikolai Andreyevich Koshelev",
+    pandov: "Nikodim Pavlovich Kondakov",
+    warship: "Warship “Alexander II” Crew",
+    baily: "Boris Nikolayevich Bugaev",
+    arseny: "The Academic Mission",
+  },
+};
 export { englishText as default };

@@ -1,18 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-import {LangProvider} from './SergiContext';
+import { LangProvider } from "./SergiContext";
 
 const tree = (
-    <LangProvider>
-      <App />
-    </LangProvider>
-  )
+  <LangProvider>
+    <App />
+  </LangProvider>
+);
 
-ReactDOM.render(tree, document.getElementById('root'));
+ReactDOM.render(tree, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

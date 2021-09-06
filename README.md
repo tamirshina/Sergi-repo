@@ -1,30 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+* Sergi-repo is one of seven media centers located in Sergi- courtyard  hotel in Jerusalem. 
 
-## Available Scripts
+* Each media center aims to deliver information about the Russian presents in the holy land from the 19th century till the first world war.  
 
-In the project directory, you can run:
+* It is written in React- js Hooks. 
 
-### `yarn start`
+* All media centers run on Windows Chrome without any need for internet connection. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* It is maintained by me :) 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* Each project is run by a script located on the desktop of each allInOne machine at the hote, the script basiclly -
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+open cmd in the right folder -> npm run build -> serve -s build -> opens Crome **full page** on localhost:3000.
 
